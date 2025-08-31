@@ -1,0 +1,111 @@
+<prompt>  
+
+## 🏢 Context  
+<context>  
+  <![CDATA[  
+  Company: a large corporation with 15,000 employees, market leader in SaaS products for businesses.  
+  Specialization: electronic document management and reporting, #1 in the region.  
+  Client base: 3 million business clients.  
+  Task: to expand from the Russian market into the Kazakhstan market.  
+  ]]>  
+</context>  
+
+## 🎯 Research Goal  
+<goal>  
+  <![CDATA[  
+  Determine in which B2B SaaS niches Russia is ahead of Kazakhstan, and in which niches Kazakhstan is ahead.  
+  Show which indicators are used to measure this.  
+  Formulate JTBD scenarios for Kazakhstani companies: which problems they try to solve with SaaS, and how Russian solutions differ in maturity/features.  
+  ]]>  
+</goal>  
+
+## 📌 Research Requirements  
+<requirements>  
+  <![CDATA[  
+  - Consider: government regulation, demand, digital literacy, technology development, competition, infrastructure, investments.  
+  - The research must be maximally evidence-based.  
+  - All conclusions must be based only on data.  
+  - If open data is not found, write: “данные не нашли, в результате не уверен”.  
+  - Each conclusion must include links to data sources.  
+  - The research and final report must be written entirely in Russian language.  
+  ]]>  
+</requirements>  
+
+## 🔎 Niches to Analyze  
+<niches>  
+  <![CDATA[  
+  - EDI / HR EDI (document and HR management)  
+  - E-reporting and tax services  
+  - KYC / compliance and counterpart verification  
+  - CLM / contract lifecycle management and archiving  
+  - EDI B2B/B2G, integrations with government and banking systems  
+  - HR SaaS (electronic HR, personnel records)  
+  - AI functions (OCR, auto-fill, scoring)  
+  ]]>  
+</niches>  
+
+## 📊 Indicators  
+<indicators>  
+  <![CDATA[  
+  - Regulation: signature methods (EDS, eGov QR, SMS), legal validity across document types  
+  - Demand: number of registered and active companies (stat.gov.kz), SME growth dynamics  
+  - User literacy: simplicity of scenarios (QR, SMS signatures), UX mechanics  
+  - Technology: integrations (1C, Bitrix24, gov gateways), presence of API, AI modules  
+  - Competition: market shares and clients of Documentolog, Uchet.kz, KYC.kz, Kompra  
+  ]]>  
+</indicators>  
+
+## 🧩 JTBD Scenarios  
+<jtbd>  
+  <![CDATA[  
+  For each niche:  
+  - Core business “job”  
+  - Context and triggers (frequency, regulatory requirements, risk, cost of errors)  
+  - Alternatives (paper, Excel, email, Russian SaaS)  
+  - Expected result (speed, risk reduction, resource savings)  
+  - RU vs KZ differences (automation, UX, APIs, signatures)  
+  - Sources: vendor websites (Documentolog, Uchet.kz, KYC.kz, Kompra), reviews (Softline, Directum), eGov, stat.gov.kz  
+  ]]>  
+</jtbd>  
+
+## 🧪 Methodology  
+<methodology>  
+  <![CDATA[  
+  - Analysis of vendor websites and documentation  
+  - Review of government sources: stat.gov.kz, egov.kz, data.egov.kz, “Digital Kazakhstan” publications  
+  - Collect company and SME data (stat.gov.kz latest releases)  
+  - Product teardowns: signatures, integrations, APIs, UX mechanics  
+  - Comparison with Russian analogs (1C-EDI, Diadoc, SBIS, Kontur)  
+  - Formalization of JTBD scenarios based on product docs and guides  
+  ]]>  
+</methodology>  
+
+## 📦 Deliverables  
+<artifacts>  
+  <![CDATA[  
+  - Niche map + RU vs KZ scoring (0–100) across 5 blocks  
+  - TAM/SAM/SOM Kazakhstan (legal entities, SMEs, segmented by industry and region)  
+  - JTBD maps for each key niche  
+  - Competitor teardown (functions, signatures, integrations, APIs, pricing, SLA)  
+  - Regulatory map (requirements, signatures, constraints)  
+  - C-level presentation with findings and entry scenarios  
+  ]]>  
+</artifacts>  
+
+## ✅ DoD — Definition of Done  
+<dod>  
+  <![CDATA[  
+  - For each niche: scoring and conclusion “ahead/behind” with confirmations and source links  
+  - For each niche: ≥3 JTBD scenarios  
+  - Use actual data from stat.gov.kz and eGov (2024/2025 only)  
+  - Product teardowns based on publicly available materials  
+  - Deliverables in the form of report + JTBD maps
+  - Your study must be strictly in Russian
+  ]]>
+</dod>  
+
+<condition>  
+  Provide answers for the user in Russian  
+</condition>  
+
+</prompt>  
