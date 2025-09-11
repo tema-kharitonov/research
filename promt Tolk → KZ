@@ -1,139 +1,136 @@
-## 🏢 Context  
-<context>  
-  <![CDATA[  
-  Company: a large corporation with 15,000 employees, market leader in SaaS products for businesses.  
-  Specialization: electronic document management and reporting, #1 in the region.  
-  Client base: 3 million business clients.  
-  Task: to expand from the Russian market into the Kazakhstan market.  
-  ]]>  
-</context>  
+<prompt>
 
-## 🎯 Research Goal  
-<goal>  
-  <![CDATA[  
-1. Сделать задание на исследование go-to-market-стратегии для продуктов:  
-   - Яндекс Телемост в России  
-   - МТС Линк в России  
+## 🏢 Context
+<context>
+  <![CDATA[
+  Company: a large corporation with 15,000 employees, market leader in SaaS products for businesses.
+  Specialization: electronic document management and reporting, #1 in the region.
+  Client base: 3 million business clients.
+  Task: expand from the Russian market into the Kazakhstan market.
+  ]]>
+</context>
 
-2. Найти, какие должны быть возможности, чтобы реализовать go-to-market-стратегию при выходе в Казахстан продукта Контур.Толк  
+## 🎯 Research Goal
+<goal>
+  <![CDATA[
+  1. Conduct a go-to-market strategy research assignment for:
+     - Yandex Telemost in Russia
+     - MTS Link in Russia
+  2. Identify what capabilities are required to implement a go-to-market strategy for entering Kazakhstan with the product Kontur.Tolk.
+  3. Discover the "unfair" competitive advantages used by Yandex Telemost and MTS Link in Russia, and define which of them Kontur.Tolk should adopt for Kazakhstan market entry.
+  ]]>
+</goal>
 
-3. Найти такие "нечестные" конкурентные преимущества, которые использовали Яндекс Телемост и МТС Линк в России, и которые должен использовать Контур.Толк при выходе в Казахстан.  
-  ]]>  
-</goal>  
+## 📌 Research Requirements
+<requirements>
+  <![CDATA[
+  1. Target market definition and segmentation.
+     TAM/SAM/SOM (market size).
+     Buyer persona (decision makers).
+     Segments with high government regulation and opportunities for non-competitive entry.
+  2. Competitor analysis and positioning in Kazakhstan.
+     Competitor map: direct, indirect, alternatives.
+     USP and key message.
+  3. Product strategy.
+     Pricing (monetization models).
+     Packaging (product versions, tariff plans).
+  4. Marketing strategy.
+     Promotion channels: digital, offline, partnerships.
+     Mandatory channels involving regulators: schools, universities, government bodies, state-owned enterprises.
+     Content, PR, events, lead generation.
+  5. Sales and distribution strategy.
+     Channels: direct sales, resellers, online channels.
+     Work through ecosystems, marketplaces, government agencies, akimats.
+  6. Execution.
+     KPI and OKR to reach a $50M market.
+     Milestones and success metrics.
+     Risks and contingency plan.
+  ]]>
+</requirements>
 
-## 📌 Research Requirements  
-<requirements>  
-  <![CDATA[  
-1. Определение целевого рынка и сегментации.  
-   TAM/SAM/SOM (ёмкость рынка).  
-   Buyer persona (ЛПР).  
-   Сегменты с высоким уровнем госрегулирования и возможностью внеконкурентного захода.  
+## 🔎 Niches to Analyze
+<niches>
+  <![CDATA[
+  Government and businesses requiring:
+  - Video conferencing in B2B, B2C, B2G, and G2C (C2C excluded).
+  - Business chats (Slack analog).
+  - Whiteboards (Miro analog).
+  - AI assistants.
+  ]]>
+</niches>
 
-2. Анализ конкурентов и позиционирование в Казахстане.  
-   Карта конкурентов: прямые, косвенные, альтернативы.  
-   УЦП и ключевой месседж.  
+## 🧩 JTBD Scenarios
+<jtbd>
+  <![CDATA[
+  For each niche:
+  - Core business "job".
+  - Context and triggers (frequency, regulatory requirements, risks, cost of errors).
+  - Alternatives (paper, Excel, email, Russian SaaS).
+  - Expected result (speed, risk reduction, resource savings).
+  - RU vs KZ differences (automation, UX, API, signatures).
+  - Sources: vendor websites (Documentolog, Uchet.kz, KYC.kz, Kompra), reviews (Softline, Directum), eGov, stat.gov.kz.
+  ]]>
+</jtbd>
 
-3. Продуктовая стратегия.  
-   Pricing (модели монетизации).  
-   Packaging (версии продукта, тарифные планы).  
+## 🧪 Methodology
+<methodology>
+  <![CDATA[
+  1. Documentary research: analysis of the Kazakhstan Tax Code, "Digitalization" law, procurement regulations.
+  2. Open data analysis: stat.gov.kz, eGov.kz, Ministry of Digital Development, procurement portals.
+  3. Competitor analysis: data on Documentolog, Uchet.kz, Kompra, Zoom, MS Teams, Russian SaaS.
+  4. Qualitative sources: user interviews and reviews, Softline and Directum case studies.
+  5. Quantitative analytics: TAM/SAM/SOM, based on enterprises and government structures.
+  6. Scenario mapping: JTBD scenarios and needs mapping.
+  7. Benchmarking: comparison with Yandex Telemost and MTS Link practices.
+  8. SWOT + risk map: entry points and risk assessment.
+  ]]>
+</methodology>
 
-4. Маркетинговая стратегия.  
-   Каналы продвижения: digital, офлайн, партнёрства.  
-   Обязательные каналы, связанные с регуляторами: школы, университеты, госучреждения, госпредприятия.  
-   Контент, PR, мероприятия, лидогенерация.  
+## 📦 Deliverables
+<artifacts>
+  <![CDATA[
+  1. Research report in PDF (structured by blocks).
+  2. TAM/SAM/SOM market map with figures.
+  3. JTBD maps per segment.
+  4. Competitor matrix (direct, indirect, alternatives).
+  5. Scenarios of "unfair" competitive advantages.
+  6. Promotion channels map (including regulatory channels).
+  7. Recommendations on KPI and GTM metrics.
+  ]]>
+</artifacts>
 
-5. Стратегия продаж и дистрибуции.  
-   Каналы: прямые продажи, реселлеры, онлайн-каналы.  
-   Работа через экосистемы, маркетплейсы, госструктуры, акиматы.  
+## 🔗 Links
+<links>
+  <![CDATA[
+  - stat.gov.kz (Kazakhstan statistics)
+  - egov.kz (electronic government)
+  - goszakup.gov.kz (public procurement portal)
+  - documentolog.kz (electronic document management)
+  - uchet.kz (accounting and reporting)
+  - kyc.kz (KYC solutions)
+  - komra.kz (compliance and risks)
+  - softline.com, directum.ru (solution reviews)
+  - Yandex Telemost, MTS Link (official websites, press releases)
+  ]]>
+</links>
 
-6. Реализация.  
-   KPI и OKR для достижения $50 млн рынка.  
-   Контрольные точки и метрики успеха.  
-   Риски и план B.  
-  ]]>  
-</requirements>  
+## ✅ DoD — Definition of Done
+<dod>
+  <![CDATA[
+  1. Research must be prepared strictly in Russian.
+  2. Every section (Context, Goal, Requirements, Niches, JTBD, Methodology, Deliverables, Links) must include concrete data. No assumptions or unsupported statements.
+  3. TAM/SAM/SOM calculated and provided.
+  4. Minimum 3 JTBD scenarios per niche.
+  5. Competitor map includes at least 7 players (Kazakhstan + international).
+  6. At least 5+ "unfair" competitive advantages described.
+  7. KPI/OKR and milestones for GTM provided.
+  8. Risk list and contingency plan included.
+  9. Final report suitable for C-level usage.
+  ]]>
+</dod>
 
-## 🔎 Niches to Analyze  
-<niches>  
-  <![CDATA[  
-Государство и бизнес, которым нужны:  
-- Видео-конференц связь в b2b, b2c, b2g и g2c (не исследуем c2c).  
-- Бизнес-чаты (аналог Slack).  
-- Вайтборд (аналог Miro).  
-- ИИ-ассистенты.  
-  ]]>  
-</niches>  
+<condition>
+  Provide answers for the user in Russian
+</condition>
 
-## 🧩 JTBD Scenarios  
-<jtbd>  
-  <![CDATA[  
-  Для каждой ниши:  
-  - Core business “job”.  
-  - Context и триггеры (частота, регуляторные требования, риски, стоимость ошибок).  
-  - Alternatives (бумага, Excel, email, российские SaaS).  
-  - Expected result (скорость, снижение рисков, экономия ресурсов).  
-  - RU vs KZ различия (автоматизация, UX, API, подписи).  
-  - Источники: сайты вендоров (Documentolog, Uchet.kz, KYC.kz, Kompra), обзоры (Softline, Directum), eGov, stat.gov.kz.  
-  ]]>  
-</jtbd>  
-
-## 🧪 Methodology  
-<methodology>  
-  <![CDATA[  
-1. **Документальное исследование**: анализ Налогового кодекса РК, закона "О цифровизации", подзаконных актов по госзакупкам.  
-2. **Анализ открытых данных**: stat.gov.kz, eGov.kz, Министерство цифрового развития, сайты госзакупок.  
-3. **Конкурентный анализ**: сбор данных о Documentolog, Uchet.kz, Kompra, Zoom, MS Teams, российские SaaS.  
-4. **Качественные источники**: интервью и обзоры пользователей, кейсы Softline, Directum.  
-5. **Количественная аналитика**: TAM/SAM/SOM, расчёты по количеству предприятий и госструктур.  
-6. **Scenario mapping**: построение JTBD-сценариев и картирование потребностей.  
-7. **Benchmarking**: сравнение с практиками Яндекс Телемост и МТС Линк.  
-8. **SWOT + риск-карта**: оценка рисков и точек входа.  
-  ]]>  
-</methodology>  
-
-## 📦 Deliverables  
-<artifacts>  
-  <![CDATA[  
-1. Исследовательский отчёт в формате PDF (структурированное исследование по блокам).  
-2. Карта TAM/SAM/SOM с цифрами.  
-3. JTBD-карты по каждому сегменту.  
-4. Матрица конкурентов (прямые, косвенные, альтернативы).  
-5. Сценарии "нечестных" конкурентных преимуществ.  
-6. Карта каналов продвижения (включая регуляторные).  
-7. Рекомендации по KPI и метрикам GTM.  
-  ]]>  
-</artifacts>  
-
-## 🔗 Links  
-<links>  
-  <![CDATA[  
-- stat.gov.kz (статистика Казахстана)  
-- egov.kz (электронное правительство)  
-- goszakup.gov.kz (портал госзакупок)  
-- documentolog.kz (электронный документооборот)  
-- uchet.kz (бухгалтерия и отчётность)  
-- kyc.kz (KYC-решения)  
-- komra.kz (compliance и риски)  
-- softline.com, directum.ru (обзоры решений)  
-- Яндекс Телемост, МТС Линк (официальные сайты, пресс-релизы)  
-  ]]>  
-</links>  
-
-## ✅ DoD — Definition of Done  
-<dod>  
-  <![CDATA[  
-1. Исследование подготовлено только на русском языке.  
-2. Каждый блок промта (Context, Goal, Requirements, Niches, JTBD, Methodology, Deliverables, Links) закрыт конкретными данными. Нет выводов и тезисов, не обоснованных на реальных данных.  
-3. TAM/SAM/SOM рассчитан и приведён.  
-4. Есть минимум 3 JTBD-сценария на каждую нишу.  
-5. Карта конкурентов включает не менее 7 игроков (KZ и международные).  
-6. Описаны 5+ "нечестных" конкурентных преимуществ.  
-7. Для GTM предложены KPI/OKR и контрольные точки.  
-8. Есть список рисков и план B.  
-9. Итоговый отчёт пригоден для использования C-level.  
-  ]]>  
-</dod>  
-
-<condition>  
-  Provide answers for the user in Russian  
-</condition>  
+</prompt>
