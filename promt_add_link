@@ -1,0 +1,35 @@
+## 🏢 Context
+<context>
+  <![CDATA[
+  You have received: (1) a research document, and (2) a Markdown file with sources. Your task is to enrich the research with sources and to confirm or refute every number and conclusion.
+  ]]>
+</context>
+
+## 🎯 Goal
+<goal>
+  <![CDATA[
+  Validate every figure and conclusion in the provided research using the supplied sources; update only figures and conclusions (leave all other wording unchanged); add segment size enrichment for SMBs with annual revenue 100M–2B RUB by number of companies; perform a second-source check for each validated item.
+  ]]>
+</goal>
+
+## 📥 Inputs
+<inputs>
+  <research_file>Original research (do not change any words except figures and conclusions)</research_file>
+  <sources_md>Markdown file with the list of sources to use first</sources_md>
+</inputs>
+
+## 📌 Rules & Requirements
+<requirements>
+  <![CDATA[
+  1) Do NOT rewrite or edit any wording in the research except: figures and conclusions.
+  2) Use the provided sources from the .md file first. If insufficient, you may add additional credible sources.
+  3) For every figure or conclusion:
+     - If confirmed by a source, update the final document with the sourced number/conclusion and cite the source.
+     - If not confirmed, write: "не нашёл источник".
+  4) Enrich the research with the total number of companies for the SMB segment (annual revenue 100M–2B RUB).
+  5) Second-source check:
+     - If a second source is NOT found, add the note: "данные только из одного источника".
+     - If two sources differ by >20%, include BOTH sources and present BOTH values in the research text.
+  6) All additions must be evidence-based with inline links or reference IDs to sources.
+  ]]>
+</requirements>
