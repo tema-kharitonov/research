@@ -76,7 +76,7 @@
   <![CDATA[
   1) Compile a list of ≥50 sources (each ≤3 years old).
   2) Use this list; if insufficient, add new reliable sources.
-  3) Estimate the market size of businesses with revenue 100M–2B RUB (count of firms and total revenue). Show this result, then continue.
+  3) Estimate the market size of businesses with revenue 120M–2B RUB (count of firms and total revenue). Show this result, then continue.
   4) Form 5 segments strictly per ## Output Structure.
   5) Report which segments you formed and the market share they cover.
   6) Ask if you are proceeding correctly.
@@ -95,7 +95,7 @@
   <![CDATA[
   - For each segment: data-confirmed fields (<average_revenue>, <industry>, <tax_regime>, etc.) are filled per schema.
   - Number of segments ≤10.
-  - Combined segments cover ≥30% of businesses with revenue 100M–2B RUB.
+  - Combined segments cover ≥30% of businesses with revenue 120M–2B RUB.
   - Product teardowns based on publicly available materials.
   - The study is strictly in Russian.
   ]]>
