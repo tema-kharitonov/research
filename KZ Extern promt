@@ -13,9 +13,7 @@
 ## 🎯 Research Goal  
 <goal>  
   <![CDATA[  
-  Determine in which B2B SaaS niches Russia is ahead of Kazakhstan, and in which niches Kazakhstan is ahead.  
-  Show which indicators are used to measure this.  
-  Formulate JTBD scenarios for Kazakhstani companies: which problems they try to solve with SaaS, and how Russian solutions differ in maturity/features.  
+  Проанализировать возможность выхода продукта Контур Экстерн для сдачи отчётности https://www.kontur-extern.ru/ из России в Республику Казахстан.  
   ]]>  
 </goal>  
 
@@ -34,13 +32,13 @@
 ## 🔎 Niches to Analyze  
 <niches>  
   <![CDATA[  
-  - EDI / HR EDI (document and HR management)  
-  - E-reporting and tax services  
-  - KYC / compliance and counterpart verification  
-  - CLM / contract lifecycle management and archiving  
-  - EDI B2B/B2G, integrations with government and banking systems  
-  - HR SaaS (electronic HR, personnel records)  
-  - AI functions (OCR, auto-fill, scoring)  
+Проанализируй возможности для отдельных сегментов в Республике Казахстан:
+- Крупные государственные компании и компании с государственным участием
+- Крупный бизнес
+- Средний бизнес
+- Малый бизнес
+- Банки и страховые
+- Сегмент образования
   ]]>  
 </niches>  
 
