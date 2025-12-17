@@ -1,16 +1,16 @@
 <prompt>
 
-## 🏢 Context
+## Context
 <context>
 A large B2B SaaS company in Russia is looking for ideas for products, channels, and services to attract entrepreneurs who have not registered a legal entity yet, but plan to do so soon.
 </context>
 
-## 🎯 Research Goal
+## Research Goal
 <goal>
 Find real, working products, acquisition channels, communities, and services used worldwide to attract early-stage entrepreneurs (pre-registration stage).
 </goal>
 
-## 📌 Research Requirements
+## Research Requirements
 <requirements>
 - Company facts must rely on trustworthy sources: official press releases, company websites, reputable news coverage, investor materials, or regulatory filings.
 - The research must be maximally evidence-based.
@@ -29,8 +29,7 @@ Shopify has a brand identity builder to attract users even before they open an o
 B2B SaaS for early-stage entrepreneurs (pre-registration).
 </niches>
 
-## 📄 Output Artifact Structure
-<artifact_structure>
+## как исследовать
 
 For each identified product, provide the following fields:
 
@@ -134,8 +133,51 @@ Compare all identified mechanisms. Answer:
 
 <!-- Repeat for product 2, 3, ... -->
 
-</artifact_structure>
-
+## artifact_structure
+на выходе отдай артефакт по такой структуре
+<product1>
+  <product>
+    <product_name></product_name>
+    <product_url></product_url>
+    <country></country>
+    <revenue>If known; otherwise write "не известно"</revenue>
+  </product>
+  <attraction_mechanisms1>
+     <attraction_type_classification></attraction_type_classification>
+     <jtdb></jtdb>
+     <effectiveness_analysis></effectiveness_analysis>
+     <capacity_analysis></capacity_analysis>
+  </attraction_mechanisms1>
+  <attraction_mechanisms2>
+     <attraction_type_classification></attraction_type_classification>
+     <jtdb></jtdb>
+     <effectiveness_analysis></effectiveness_analysis>
+     <capacity_analysis></capacity_analysis>
+  </attraction_mechanisms2>
+      <!-- Repeat for mechanism 3, 4, ... -->
+</product1>
+<product2>
+<product>
+    <product_name></product_name>
+    <product_url></product_url>
+    <country></country>
+    <revenue>If known; otherwise write "не известно"</revenue>
+  </product>
+  <attraction_mechanisms1>
+     <attraction_type_classification></attraction_type_classification>
+     <jtdb></jtdb>
+     <effectiveness_analysis></effectiveness_analysis>
+     <capacity_analysis></capacity_analysis>
+  </attraction_mechanisms1>
+  <attraction_mechanisms2>
+     <attraction_type_classification></attraction_type_classification>
+     <jtdb></jtdb>
+     <effectiveness_analysis></effectiveness_analysis>
+     <capacity_analysis></capacity_analysis>
+  </attraction_mechanisms2>
+      <!-- Repeat for mechanism 3, 4, ... -->
+</product2>
+      <!-- Repeat for product 3, 4, ... -->
 ## ✅ Definition of Done
 <dod>
 - At least 20 international examples of B2B SaaS products with non-direct acquisition channels.
