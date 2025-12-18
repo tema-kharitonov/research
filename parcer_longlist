@@ -1,51 +1,97 @@
-Задача: составить предварительный лонг-лист продуктов и компаний.
 
-Контекст:
-Мы изучаем, как продукты привлекают людей,
-которые ЕЩЁ не зарегистрировали бизнес,
-но уже думают о запуске (pre-registration / pre-entrepreneur stage).
+<prompt>
 
-Нужно:
-Составить максимально широкий список продуктов и компаний
-(зарубежных и российских),
-которые ПРЕДПОЛОЖИТЕЛЬНО используют способы привлечения будущих предпринимателей ДО регистрации бизнеса не с помощью стандартного перфоманс-маркетинга.
-А используют:
+## 🎯 User Task
+<task>
+Create a preliminary long list of products and companies.
+</task>
+
+## 🧭 Context
+<context>
+We are studying how products attract people who have NOT registered a business yet,
+but are already thinking about launching one (pre-registration / pre-entrepreneur stage).
+</context>
+
+## ❗ Exclusion List (IMPORTANT)
+
+The project contains a file named "longlist1.md", "longlist2.md", "longlist3.md"
+
+This file includes products and companies that have ALREADY been listed.
+
+Before generating new items:
+- Read "longlist1.md"
+- Do NOT repeat any product or company listed there
+- Do NOT include direct competitors, subsidiaries, rebrands, or localized versions of those products
 
 
-Важно:
-- Это НЕ финальный список.
-- Допускаются пограничные и сомнительные кейсы.
-- Допускается неопределённость.
-- Не нужно доказывать эффективность.
-- Не нужно глубоко анализировать механику.
+## 🧩 What Needs To Be Done
+<instructions>
+  <step index="1">
+    Compile the widest possible list of products and companies
+    (both international and Russian)
+    that MAY attract future entrepreneurs BEFORE business registration.
+  </step>
 
-Критерии включения:
-- Продукт или сервис соприкасается с будущим предпринимателем
-  ДО регистрации ИП / ООО / компании.
-- Есть хотя бы один возможный неплатный entry-point
-  (инструмент, контент, комьюнити, генератор, калькулятор, шаблон, чеклист, симуляция и т.п.).
+  <step index="2">
+    Do NOT limit yourself to proven or validated cases.
+    Borderline, weak, or questionable examples are allowed.
+    Try to cover as many DIFFERENT product categories and industries as possible.
+  </step>
 
-Что НЕ нужно делать:
-- НЕ анализировать CJM.
-- НЕ оценивать метрики.
-- НЕ делать выводы.
-- НЕ писать про платные каналы.
-- НЕ структурировать как отчёт.
+  <step index="3">
+    Assume that these products do NOT rely on standard performance marketing.
+    Possible attraction mechanisms may include (but are not limited to):
+    Paid Tripwire,
+    Free Tripwire,
+    Community / Membership,
+    First-customer acquisition,
+    Ecosystem lock-in,
+    Data dependency,
+    Sandbox / demo environments,
+    Pay-after-result,
+    Celebrity or expert involvement,
+    Closed access,
+    Event marketing,
+    Data-as-an-entry,
+    User certification,
+    Embedded acquisition,
+    Educational platforms
+    Content marketing
+  </step>
+</instructions>
 
-Формат ответа:
-Таблица или список из 60–80 позиций, где для каждого указано:
+## 🚫 What NOT To Do
+<restrictions>
+  <item>Do NOT analyze CJM</item>
+  <item>Do NOT estimate metrics</item>
+  <item>Do NOT validate effectiveness</item>
+  <item>Do NOT analyze mechanics deeply</item>
+  <item>Do NOT write about paid marketing channels</item>
+  <item>Do NOT structure the result as a report</item>
+  <item>Do NOT analyze government, offline, regulation, or infrastructure products and companies.
+</restrictions>
 
-1. Название продукта / компании
-2. Страна
-3. Ссылка на сайт
-4. Почему этот продукт может быть релевантен
-   (1–2 предложения, гипотетически, без доказательств)
+## ✅ Inclusion Criteria
+<criteria>
+  <item>The product interacts with future entrepreneurs BEFORE business registration</item>
+  <item>There is at least one possible free entry point:
+        tool, content, community, generator, calculator, template, checklist, simulation, etc.</item>
+</criteria>
 
-Группируй список по типу продукта, если возможно:
-- e-commerce / marketplaces
-- финансы / бухгалтерия
-- no-code / website builders
-- комьюнити / education
-- операционные инструменты
+## 📄 Output Format
+<output_format>
+  Provide either:
+  - a Markdown (.md) file, OR
+  - a plain list of 30 items.
 
-Язык ответа: русский.
+  For EACH item include:
+  1. Product or company name
+  2. Country
+  3. Website link
+  4. Why this product MAY be relevant — hypothetical, even speculative reasoning is allowed.
+</output_format>
+
+## 🌐 Language
+All output must be written in Russian.
+
+</prompt>
