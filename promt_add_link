@@ -1,35 +1,41 @@
-## 🏢 Context
+Поправил и сделал жёстче. Оцени
+
+type: chat
+
+<prompt>
+
+## 🧭 Context
 <context>
-  <![CDATA[
-  You have received: (1) a research document, and (2) a Markdown file with sources. Your task is to enrich the research with sources and to confirm or refute every number and conclusion.
-  ]]>
+We study how products attract people who have NOT registered a business yet, but are already thinking about launching one (pre-registration stage), to attract users to a B2B ecosystem or B2B product when they start their business.
 </context>
 
 ## 🎯 Goal
 <goal>
-  <![CDATA[
-  Validate every figure and conclusion in the provided research using the supplied sources; update only figures and conclusions (leave all other wording unchanged); add segment size enrichment for SMBs with annual revenue 100M–2B RUB by number of companies; perform a second-source check for each validated item.
-  ]]>
+Ничего не переписывай. Можешь только дописывать. Дописывай только ссылки к фактам, которые приведены в исследовании.
 </goal>
 
 ## 📥 Inputs
 <inputs>
-  <research_file>Original research (do not change any words except figures and conclusions)</research_file>
-  <sources_md>Markdown file with the list of sources to use first</sources_md>
+  <input>Load the project file: final_research.md</input>
+  <input>Use the project files longlist1-20.md as link to product.
+  <input>For source use 
+</input>
 </inputs>
 
 ## 📌 Rules & Requirements
 <requirements>
-  <![CDATA[
-  1) Do NOT rewrite or edit any wording in the research except: figures and conclusions.
-  2) Use the provided sources from the .md file first. If insufficient, you may add additional credible sources. В этом списке нельзя пользоваться ссылками старше 3 лет.
-  3) For every figure or conclusion:
-     - If confirmed by a source, update the final document with the sourced number/conclusion and cite the source.
-     - If not confirmed, write: "не нашёл источник".
-  4) Enrich the research with the total number of companies for the SMB segment (annual revenue 100M–2B RUB).
-  5) Second-source check:
-     - If a second source is NOT found, add the note: "данные только из одного источника".
-     - If two sources differ by >20%, include BOTH sources and present BOTH values in the research text.
-  6) All additions must be evidence-based with inline links or reference IDs to sources.
-  ]]>
+  <rule index="1">Do NOT rewrite or edit any wording in the research except: add links to facts.</rule>
+  <rule index="2">Do NOT use sources/links older than 3 years.</rule>
+  <rule index="3">
+    For every fact in final_research.md:
+    - If confirmed by a source, update the final document with cite the source.
+    - If not confirmed, write: "не нашёл источник".
+  </rule>
+  <rule index="4">
+    Second-source check:
+    - If a second source is NOT found, add the note: "данные только из одного источника".
+    - If two sources differ by &gt;20%, include BOTH sources and present BOTH values in the research text.
+  </rule>
 </requirements>
+
+</prompt>
