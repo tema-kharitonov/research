@@ -1,1 +1,94 @@
+<prompt>
 
+## 🧭 Context
+<context>
+We are a large B2B SaaS company in Russia. We study reproducible ways to attract pre-entrepreneurs into digital B2B ecosystems.
+</context>
+
+## 🎯 Task
+<goal>
+Build the final analytical artifact based ONLY on the file normalized_mechanisms.md.
+</goal>
+
+## 📥 Input
+<inputs>
+  <file>normalized_mechanisms.md</file>
+</inputs>
+
+## ✅ Hard Rules
+<rules>
+  <rule>Write ONLY in Russian.</rule>
+  <rule>Do NOT add any new examples.</rule>
+  <rule>Do NOT use any information outside normalized_mechanisms.md.</rule>
+  <rule>Do NOT invent or expand facts.</rule>
+  <rule>If the data is insufficient, state this explicitly.</rule>
+</rules>
+
+## 🧩 What You Must Do
+<instructions>
+  <step index="1">Group all mechanisms by acquisition TYPES.</step>
+  <step index="2">For EACH type: formulate a general JTBD (based on examples), write effectiveness analysis, and write capacity analysis.</step>
+  <step index="3">For EACH type: list products and explain HOW EXACTLY they use this mechanism (strictly from the extracted data).</step>
+</instructions>
+
+## 🧷 Acquisition Typology
+<classification>
+  <note>Use this as a classification taxonomy, not as a checklist.</note>
+  <types>
+    <type>paid_tripwire</type>
+    <type>free_tripwire</type>
+    <type>community_membership</type>
+    <type>first_customer_acquisition</type>
+    <type>ecosystem_lock_in</type>
+    <type>data_dependency</type>
+    <type>sandbox_demo</type>
+    <type>pay_after_result</type>
+    <type>celebrity_expert</type>
+    <type>closed_access</type>
+    <type>event_marketing</type>
+    <type>data_as_entry</type>
+    <type>user_certification</type>
+    <type>embedded_acquisition</type>
+    <type>educational_platforms</type>
+    <type>content_marketing</type>
+    <type>other</type>
+  </types>
+  <other_rule>If you use "other", you MUST explain it.</other_rule>
+</classification>
+
+## 📄 Output Format
+<output>
+  <format>
+For each acquisition type, use exactly this structure:
+
+Тип привлечения: &lt;название&gt;
+
+JTBD:
+— When I …
+— I want …
+— So that …
+— Success looks like …
+
+Effectiveness analysis:
+— как конвертирует внимание в использование
+— трение (время / доверие / усилия)
+— повторяемость
+
+Capacity analysis:
+— потенциальная аудитория
+— ограничения масштабирования
+— зависимости (платформы / регуляция / партнёры)
+
+Продукты:
+- Название — ссылка
+  Как использует механизм (1–3 предложения)
+
+(Repeat for each acquisition type)
+  </format>
+  <deliverables>
+    <file>final_structured_document.doc</file>
+    <file>final_structured_document.pdf</file>
+  </deliverables>
+</output>
+
+</prompt>
