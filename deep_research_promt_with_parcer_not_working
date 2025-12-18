@@ -1,136 +1,75 @@
 <prompt>
 
 ## Context
-<context>
+
 A large B2B SaaS company in Russia is looking for ideas how to attract entrepreneurs who have not registered a legal entity yet, but plan to do so soon.
-</context>
+
 
 ## Research Goal
-<goal>
+
 Опиши способы привлечения пользователей, которые используют продукты из списка из файлов longlist1-4.md
-</goal>
+
 
 ## Research Requirements
-<requirements>
 - Company facts must rely on trustworthy sources: official press releases, company websites, reputable news coverage, investor materials, or regulatory filings.
 - The research must be maximally evidence-based.
 - All conclusions must be derived strictly from data.
 - If open data is not found, ничего не придумывай, просто не пиши про это
 - Every conclusion must include links to its data sources.
 - The research and the final report must be written entirely in the Russian language.
-</requirements>
-
-<example>
-Shopify has a brand identity builder to attract users even before they open an online store.
-</example>
-
-## 🔎 Niches to Analyze
-<niches>
-B2B SaaS for early-stage entrepreneurs (pre-registration).
-</niches>
+- Based on discovery method, JTBD, and effectiveness, explain which attraction type best fits and why.
 
 ## как исследовать
 
-For each identified product, provide the following fields:
+For each product from list:
 
-<product>
+<опиши продукт из списка>
   <product_name></product_name>
   <product_url></product_url>
   <описание из источников longlist1-4.md>
-
   <product_attraction_analysis>
+</опиши продукт из списка>
+<способы привлечения>
+Analyze all non-direct ways the product attracts and acquires users:
+    Paid Tripwire,
+    Free Tripwire,
+    Community / Membership,
+    First-customer acquisition,
+    Ecosystem lock-in,
+    Data dependency,
+    Sandbox / demo environments,
+    Pay-after-result,
+    Celebrity or expert involvement,
+    Closed access,
+    Event marketing,
+    Data-as-an-entry,
+    User certification,
+    Embedded acquisition,
+    Educational platforms
+    Content marketing
+</способы привлечения>
+<описание способов привлечения>
+опиши способы привлечения пользователей в этот продукт
+  <attraction_mechanisms>
+  <jtbd>
+  <capacity_analysis>
+</описание способов привлечения>
 
-    <definition>
-Analyze all non-direct ways the product attracts and acquires users. A product may use multiple attraction mechanisms simultaneously.
-    </definition>
+## ✅ Condition
+<condition>
+Return the result in .doc and .pdf.
+Provide answers for the user in Russian.
+</condition>
 
-    <research_rules>
-- Do not assume attraction types upfront.
-- Each attraction mechanism must be identified from evidence.
-- Each mechanism must be analyzed independently.
-- Classification is a conclusion, not an input.
-    </research_rules>
+</prompt>
 
-    <attraction_mechanisms>
 
-      <mechanism index="1">
+<prompt>
+## Context
+A large B2B SaaS company in Russia is looking for ideas how to attract entrepreneurs who have not registered a legal entity yet, but plan to do so soon.
 
-        <discovery>
-Describe how users first encounter this mechanism. Examples: content, integrations, referrals, ecosystem presence, community, data access.
-        </discovery>
-
-        <jtbd>
-When I [context], I want [motivation], so that [expected outcome], I evaluate success by [measurable criteria].
-        </jtbd>
-
-        <effectiveness_analysis>
-Assess:
-- how well this mechanism converts attention into usage,
-- friction level (time, money, trust),
-- repeatability.
-Use qualitative or quantitative signals if available.
-        </effectiveness_analysis>
-
-        <capacity_analysis>
-Estimate:
-- reachable audience size,
-- scalability limits,
-- dependency on partners, platforms, or regulation.
-If data is missing, explicitly state uncertainty.
-        </capacity_analysis>
-
-        <attraction_type_classification>
-
-          <analysis>
-Based on discovery method, JTBD, and effectiveness, explain which attraction type best fits and why.
-          </analysis>
-
-          <selection_mode>single</selection_mode>
-
-          <enum>
-            <option value="paid_product">Paid product</option>
-            <option value="free_product">Free product</option>
-            <option value="service">Service</option>
-            <option value="community">Community</option>
-            <option value="acquisition_channel">Acquisition channel</option>
-            <option value="ecosystem_lockin">Ecosystem lock-in</option>
-            <option value="data_dependency">Data dependency</option>
-            <option value="other">Other</option>
-          </enum>
-
-          <selected_value>
-            <value></value>
-          </selected_value>
-
-          <other_explanation>
-Required if "other" is selected.
-          </other_explanation>
-
-        </attraction_type_classification>
-
-        <evidence>
-List sources, product pages, cases, or observable behavior that support this mechanism.
-        </evidence>
-
-      </mechanism>
-
-      <!-- Repeat for mechanism 2, 3, ... -->
-
-    </attraction_mechanisms>
-
-    <synthesis>
-Compare all identified mechanisms. Answer:
-- which mechanisms are primary vs secondary,
-- which scale best,
-- which are defensible,
-- which depend on external constraints.
-    </synthesis>
-
-  </product_attraction_analysis>
-
-</product>
-
-<!-- Repeat for product 2, 3, ... -->
+## Goal
+Опиши способы привлечения пользователей проанализировав документ raw_research, приведи примеры, какие продукты используют такой способ привлечения из списка из файлов longlist1-4.md
 
 ## artifact_structure
 на выходе отдай артефакт по такой структуре
