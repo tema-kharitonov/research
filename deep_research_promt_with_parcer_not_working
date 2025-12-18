@@ -1,50 +1,95 @@
 <prompt>
+## 🧭 Context
+<context>
+You work for a leading B2B SaaS company in Russia.
+You are studying how products attract people who have NOT registered a business yet,
+but are already thinking about launching one
+(pre-registration / pre-entrepreneur stage),
+in order to later bring them into a B2B ecosystem.
+</context>
+
+## 🎯 Task
+<goal>
+Собрать из данных, которые сгенерировал Deep Research готовый артефакт
+</goal>
+
+## Что делать
+1. Выдели примеры привлечения из ## Input
+2. Определи тип привлечения в каждом примере
+3. Заполни файл по структуре
+
+
+## Input
+Файлы приложенные к проекту raw_research1-20.pdf
+
+## attraction_type_classification
+          <analysis>
+            На основе discovery, JTBD и effectiveness объясни,
+            какой тип привлечения подходит лучше всего и почему.
+          </analysis>
+
+          <selection_mode>single</selection_mode>
+
+          <enum>
+         
+          </enum>
+
+          <selected_value>
+            <value></value>
+          </selected_value>
+
+          <other_explanation>
+            Обязательно заполни, если выбран "other".
+          </other_explanation>
+        </attraction_type_classification>
 
 ## artifact_structure
-на выходе отдай артефакт по такой структуре
-<product1>
-  <product>
+на выходе отдай документ по такой структуре
+<тип_привлечения1>
+  <attraction_mechanisms>
+     <jtdb></jtdb>
+     <effectiveness_analysis></effectiveness_analysis>
+     <capacity_analysis></capacity_analysis>    
+  </attraction_mechanisms>
+  <product1>
     <product_name></product_name>
     <product_url></product_url>
-    <country></country>
     <revenue>If known; otherwise write "не известно"</revenue>
-  </product>
-  <attraction_mechanisms1>
-     <attraction_type_classification></attraction_type_classification>
-     <jtdb></jtdb>
-     <effectiveness_analysis></effectiveness_analysis>
-     <capacity_analysis></capacity_analysis>
-  </attraction_mechanisms1>
-  <attraction_mechanisms2>
-     <attraction_type_classification></attraction_type_classification>
-     <jtdb></jtdb>
-     <effectiveness_analysis></effectiveness_analysis>
-     <capacity_analysis></capacity_analysis>
-  </attraction_mechanisms2>
-      <!-- Repeat for mechanism 3, 4, ... -->
-</product1>
-<product2>
-<product>
+    <how_product_use_this_mechanism>
+  </product1>
+  <product2>
     <product_name></product_name>
     <product_url></product_url>
-    <country></country>
     <revenue>If known; otherwise write "не известно"</revenue>
-  </product>
-  <attraction_mechanisms1>
-     <attraction_type_classification></attraction_type_classification>
-     <jtdb></jtdb>
-     <effectiveness_analysis></effectiveness_analysis>
-     <capacity_analysis></capacity_analysis>
-  </attraction_mechanisms1>
-  <attraction_mechanisms2>
-     <attraction_type_classification></attraction_type_classification>
-     <jtdb></jtdb>
-     <effectiveness_analysis></effectiveness_analysis>
-     <capacity_analysis></capacity_analysis>
-  </attraction_mechanisms2>
-      <!-- Repeat for mechanism 3, 4, ... -->
-</product2>
+    <how_product_use_this_mechanism>
+  </product2>
       <!-- Repeat for product 3, 4, ... -->
-
-
+</<тип_привлечения1>
+<тип_привлечения2>
+  <attraction_mechanisms>
+     <jtdb></jtdb>
+     <effectiveness_analysis></effectiveness_analysis>
+     <capacity_analysis></capacity_analysis>    
+  </attraction_mechanisms>
+  <product1>
+    <product_name></product_name>
+    <product_url></product_url>
+    <revenue>If known; otherwise write "не известно"</revenue>
+    <how_product_use_this_mechanism>
+  </product1>
+  <product2>
+    <product_name></product_name>
+    <product_url></product_url>
+    <revenue>If known; otherwise write "не известно"</revenue>
+    <how_product_use_this_mechanism>
+  </product2>
+      <!-- Repeat for product 3, 4, ... -->
+</тип_привлечения2>
+      <!-- Repeat for тип_привлечения 3, 4, ... -->
+## Что запрещено
+- Не  пропускай ни один пример привлечения.
+- Не включай в исследование примеры привлечения, которые не приводят к привлечению в b2b продукт или экосистему.
+- Ничего не придумывай, бери примеры только из файлов проекта
+- Если в процессе описания примера привлечения из файлов проекта тебе не хватает информации, можешь обратиться в сеть. В других случаях это запрещено.
+- Не добавляй примеры.
 </prompt>
