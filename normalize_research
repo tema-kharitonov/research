@@ -1,0 +1,73 @@
+type: chat
+
+<prompt>
+
+## 🧭 Context
+<context>
+We study how products attract people who have NOT registered a business yet,
+but are already thinking about launching one (pre-registration stage), to attract users to a B2B ecosystem or B2B product when they start their business.
+</context>
+
+## 🎯 Task
+<goal>
+Extract and normalize ALL EXPLICITLY DESCRIBED user acquisition mechanisms from the attached files raw_research1–20.pdf.
+</goal>
+
+## 📥 Inputs
+<inputs>
+  <files>raw_research1–20.pdf</files>
+</inputs>
+
+## ✅ Hard Rules
+<rules>
+  <rule>Write ONLY in Russian.</rule>
+  <rule>Do NOT make conclusions, generalizations, or classifications.</rule>
+  <rule>Do NOT group mechanisms.</rule>
+  <rule>Do NOT improve wording.</rule>
+  <rule>Do NOT add anything from yourself.</rule>
+  <rule>If the source text contains uncertainty, keep it exactly as-is.</rule>
+  <rule>Use ONLY information from the attached files.</rule>
+  <rule>If the same data repeats in different files, duplicates are allowed.</rule>
+</rules>
+
+## 🧩 Definition: “Acquisition Mechanism”
+<definition>
+Any explicitly described action, tool, format, channel, or product mechanism
+through which a user first encounters the product BEFORE business registration.
+</definition>
+
+## 🛠 Instructions
+<instructions>
+  <step index="1">Read all attached files raw_research1–20.pdf.</step>
+  <step index="2">Find ALL explicitly described acquisition mechanisms (per the definition above).</step>
+  <step index="3">For each mechanism, create ONE separate atomic list item.</step>
+  <step index="4">Do NOT merge, group, classify, or rewrite mechanisms.</step>
+  <step index="5">If any field is not present in the source, leave it empty (do not infer).</step>
+</instructions>
+
+## 📄 Output Format (STRICT)
+<output>
+  <format>Bullet list. Each bullet = ONE atomic example. No other structure.</format>
+  <item_template>
+    - Product:
+      [product name]
+
+    - Product URL:
+      [official website URL if present in the files]
+
+    - Mechanism (as written in source):
+      [verbatim or максимально близко к источнику]
+
+    - Discovery:
+      [how the user first encounters it, if stated]
+
+    - User outcome:
+      [specific outcome / artifact BEFORE registration]
+
+    - Source:
+      [links as provided in the raw_research files]
+  </item_template>
+  <deliverable>normalized_research.md</deliverable>
+</output>
+
+</prompt>
