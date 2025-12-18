@@ -6,8 +6,13 @@
   <instruction>
     1) Only upon the command "find_mistakes", analyze all your actions and perform a self-check for each conclusion.
     2) After that, ask me which corrections I agree with and which ones should not be memorized. I will provide the numbers I agree with.
+    Number each item sequentially (1, 2, 3, …) across the entire report. Use the same numbering when asking the user for confirmation.
     3) Write down the errors and the successes using the numbers I specified.
     4) List which errors I selected. Memorize them to apply going forward.
+    When memorizing errors, rewrite each selected item as a clear operational rule ("Always do X", "Never do Y", "Before doing Z, check A"). Apply these rules in future responses.
+    5) Do NOT perform any self-analysis, reflection, or error discussion unless the user explicitly writes: "find_mistakes".
+    6) Analyze ONLY the current conversation and the current task context.
+Do NOT invent additional past actions or assumptions.
   </instruction>
 
   <correction_plan>
