@@ -1,50 +1,53 @@
-Поправил и сделал жёстче. Оцени
-
-type: chat
-
 <prompt>
+  ## 🧭 Context
+  <context>
+    We study how products attract people who have NOT registered a business yet, but are already thinking about launching one (pre-registration stage), to attract users to a B2B ecosystem or B2B product when they start their business.
+  </context>
 
-## 🧭 Context
-<context>
-We study how products attract people who have NOT registered a business yet, but are already thinking about launching one (pre-registration stage), to attract users to a B2B ecosystem or B2B product when they start their business.
-</context>
+  ## 🎯 Goal
+  <goal>
+    Do not rewrite anything. You may only append. Append ONLY links to facts that already exist in the research.
+  </goal>
 
-## 🎯 Goal
-<goal>
-Ничего не переписывай. Можешь только дописывать. Дописывай только ссылки к фактам, которые приведены в исследовании.
-</goal>
+  ## 📥 Inputs
+  <inputs>
+    <input>Load the project file: final_research.md</input>
+    <input>Use the project file longlist1-20.md as a source of product links (mandatory, but not the only allowed source).</input>
+    <input>
+      For sources, use only:
+      <allowed_sources>
+        <item>Official product website</item>
+        <item>Company blog</item>
+        <item>Help / documentation pages</item>
+        <item>Press releases</item>
+        <item>Founder interviews</item>
+        <item>Investor materials</item>
+        <item>Reputable industry or business media</item>
+      </allowed_sources>
+    </input>
+  </inputs>
 
-## 📥 Inputs
-<inputs>
-  <input>Load the project file: final_research.md</input>
-  <input>Use the project files longlist1-20.md as link to product.
-  <input>For source use
-    <allowed_sources>
-    <item>Official product website</item>
-    <item>Company blog</item>
-    <item>Help or documentation pages</item>
-    <item>Press releases</item>
-    <item>Founder interviews</item>
-    <item>Investor materials</item>
-    <item>Reputable industry or business media</item>
-    </allowed_sources>
-</input>
-</inputs>
-
-## 📌 Rules & Requirements
-<requirements>
-  <rule index="1">Do NOT rewrite or edit any wording in the research except: add links to facts.</rule>
-  <rule index="2">Do NOT use sources/links older than 3 years.</rule>
-  <rule index="3">
-    For every fact in final_research.md:
-    - If confirmed by a source, update the final document with cite the source.
-    - If not confirmed, write: "не нашёл источник".
-  </rule>
-  <rule index="4">
-    Second-source check:
-    - If a second source is NOT found, add the note: "данные только из одного источника".
-    - If two sources differ by &gt;20%, include BOTH sources and present BOTH values in the research text.
-  </rule>
-</requirements>
-
+  ## 📌 Rules & Requirements
+  <requirements>
+    <rule index="1">Do NOT rewrite or edit any wording in the research. Only append links to facts.</rule>
+    <rule index="2">Do NOT use sources/links older than 3 years.</rule>
+    <rule index="3">
+      For every fact in final_research.md:
+      - If confirmed by a source, append an inline citation next to that fact in the format [source].
+      - If not confirmed, append: "не нашёл источник".
+    </rule>
+    <rule index="4">
+      Second-source check:
+      - If a second source is NOT found, append: "данные только из одного источника".
+      - If two sources differ by &gt;20%, include BOTH sources and present BOTH values in the research text (do not remove the original fact wording; only add the second value + its source).
+    </rule>
+    <rule index="5">Add sources as inline citations: [source]. [source] must be a clickable URL.
+    </rule>
+    <rule index="6">A “fact” is a numeric claim (%, count, money, range) or a verifiable specific statement.
+    If a statement is qualitative or interpretive (e.g. "эффективно", "удобно", "часто"), do NOT treat it as a fact.
+    </rule>
+    <rule index="7">    
+    Process the document sequentially from top to bottom.
+    </rule>
+  </requirements>
 </prompt>
