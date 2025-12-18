@@ -4,6 +4,7 @@
 ## 🎯 User Task
 <task>
 Create a preliminary long list of products and companies.
+Generate 25 companies.
 </task>
 
 ## 🧭 Context
@@ -19,7 +20,7 @@ The project contains a file named "longlist1.md", "longlist2.md", "longlist3.md"
 This file includes products and companies that have ALREADY been listed.
 
 Before generating new items:
-- Read "longlist1.md"
+- Read "longlist1.md", "longlist2.md", "longlist3.md"
 - Do NOT repeat any product or company listed there
 - Do NOT include direct competitors, subsidiaries, rebrands, or localized versions of those products
 
@@ -81,8 +82,9 @@ Before generating new items:
 ## 📄 Output Format
 <output_format>
   Provide a simple bullet list in Markdown.
-No headings, no sections, no grouping.
+  No headings, no sections, no grouping.
   Markdown (.md) file
+  Generate EXACTLY 25 new items.
 
   For EACH item include:
   1. Product or company name
