@@ -80,9 +80,8 @@ Before generating new items:
 
 ## 📄 Output Format
 <output_format>
-  Provide either:
-  - a Markdown (.md) file, OR
-  - a plain list of 30 items.
+ 
+  Markdown (.md) file
 
   For EACH item include:
   1. Product or company name
