@@ -61,7 +61,7 @@ Build the final analytical artifact based ONLY on the file normalized_mechanisms
   <format>
 For each acquisition type, use exactly this structure:
 
-Тип привлечения: &lt;название&gt;
+Acquisition type: <name>
 
 JTBD:
 — When I …
@@ -70,18 +70,18 @@ JTBD:
 — Success looks like …
 
 Effectiveness analysis:
-— как конвертирует внимание в использование
-— трение (время / доверие / усилия)
-— повторяемость
+— how it converts attention into usage  
+— friction (time / trust / effort)  
+— repeatability  
 
 Capacity analysis:
-— потенциальная аудитория
-— ограничения масштабирования
-— зависимости (платформы / регуляция / партнёры)
+— potential audience  
+— scaling limitations  
+— dependencies (platforms / regulation / partners)  
 
-Продукты:
-- Название — ссылка
-  Как использует механизм (1–5 предложения)
+Products:
+- Name — link  
+  How it uses the mechanism (1–5 sentences)
 
 (Repeat for each acquisition type)
   </format>
