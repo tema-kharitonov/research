@@ -1,76 +1,5 @@
 <prompt>
 
-## Context
-
-A large B2B SaaS company in Russia is looking for ideas how to attract entrepreneurs who have not registered a legal entity yet, but plan to do so soon.
-
-
-## Research Goal
-
-Опиши способы привлечения пользователей, которые используют продукты из списка из файлов longlist1-4.md
-
-
-## Research Requirements
-- Company facts must rely on trustworthy sources: official press releases, company websites, reputable news coverage, investor materials, or regulatory filings.
-- The research must be maximally evidence-based.
-- All conclusions must be derived strictly from data.
-- If open data is not found, ничего не придумывай, просто не пиши про это
-- Every conclusion must include links to its data sources.
-- The research and the final report must be written entirely in the Russian language.
-- Based on discovery method, JTBD, and effectiveness, explain which attraction type best fits and why.
-
-## как исследовать
-
-For each product from list:
-
-<опиши продукт из списка>
-  <product_name></product_name>
-  <product_url></product_url>
-  <описание из источников longlist1-4.md>
-  <product_attraction_analysis>
-</опиши продукт из списка>
-<способы привлечения>
-Analyze all non-direct ways the product attracts and acquires users:
-    Paid Tripwire,
-    Free Tripwire,
-    Community / Membership,
-    First-customer acquisition,
-    Ecosystem lock-in,
-    Data dependency,
-    Sandbox / demo environments,
-    Pay-after-result,
-    Celebrity or expert involvement,
-    Closed access,
-    Event marketing,
-    Data-as-an-entry,
-    User certification,
-    Embedded acquisition,
-    Educational platforms
-    Content marketing
-</способы привлечения>
-<описание способов привлечения>
-опиши способы привлечения пользователей в этот продукт
-  <attraction_mechanisms>
-  <jtbd>
-  <capacity_analysis>
-</описание способов привлечения>
-
-## ✅ Condition
-<condition>
-Return the result in .doc and .pdf.
-Provide answers for the user in Russian.
-</condition>
-
-</prompt>
-
-
-<prompt>
-## Context
-A large B2B SaaS company in Russia is looking for ideas how to attract entrepreneurs who have not registered a legal entity yet, but plan to do so soon.
-
-## Goal
-Опиши способы привлечения пользователей проанализировав документ raw_research, приведи примеры, какие продукты используют такой способ привлечения из списка из файлов longlist1-4.md
-
 ## artifact_structure
 на выходе отдай артефакт по такой структуре
 <product1>
@@ -116,18 +45,6 @@ A large B2B SaaS company in Russia is looking for ideas how to attract entrepren
       <!-- Repeat for mechanism 3, 4, ... -->
 </product2>
       <!-- Repeat for product 3, 4, ... -->
-## ✅ Definition of Done
-<dod>
-- At least 20 international examples of B2B SaaS products with non-direct acquisition channels.
-- After the research, it should be possible to take attraction-mechanism ideas and reuse them to build similar mechanisms in Russia.
-- Each mechanism includes links so a researcher can test how it works.
-- The mechanisms can be prioritized to decide what to reproduce in Russia first.
-</dod>
 
-## ✅ Condition
-<condition>
-Return the result in .doc and .pdf.
-Provide answers for the user in Russian.
-</condition>
 
 </prompt>
