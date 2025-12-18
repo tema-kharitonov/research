@@ -80,7 +80,8 @@ Before generating new items:
 
 ## 📄 Output Format
 <output_format>
- 
+  Provide a simple bullet list in Markdown.
+No headings, no sections, no grouping.
   Markdown (.md) file
 
   For EACH item include:
