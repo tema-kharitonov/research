@@ -18,7 +18,16 @@ We study how products attract people who have NOT registered a business yet, but
 <inputs>
   <input>Load the project file: final_research.md</input>
   <input>Use the project files longlist1-20.md as link to product.
-  <input>For source use 
+  <input>For source use
+    <allowed_sources>
+    <item>Official product website</item>
+    <item>Company blog</item>
+    <item>Help or documentation pages</item>
+    <item>Press releases</item>
+    <item>Founder interviews</item>
+    <item>Investor materials</item>
+    <item>Reputable industry or business media</item>
+    </allowed_sources>
 </input>
 </inputs>
 
