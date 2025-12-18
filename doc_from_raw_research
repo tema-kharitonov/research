@@ -31,7 +31,22 @@ in order to later bring them into a B2B ecosystem.
           <selection_mode>single</selection_mode>
 
           <enum>
-         
+         Paid Tripwire,
+    Free Tripwire,
+    Community / Membership,
+    First-customer acquisition,
+    Ecosystem lock-in,
+    Data dependency,
+    Sandbox / demo environments,
+    Pay-after-result,
+    Celebrity or expert involvement,
+    Closed access,
+    Event marketing,
+    Data-as-an-entry,
+    User certification,
+    Embedded acquisition,
+    Educational platforms
+    Content marketing
           </enum>
 
           <selected_value>
