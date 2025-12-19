@@ -13,6 +13,18 @@ The project contains attached files: raw_research1.md
 ## 📤 Output
 <output>
 One file: normalized_research1.md
+<format>
+Produce ONE Markdown file: normalized_research1.md.
+
+Each entry MUST follow EXACTLY this structure:
+- Product
+- Link
+- Description of product
+- Mechanism type
+- Description of mechanism
+- Acqusition
+- jtbd
+</format>
 </output>
 
 ## 🎯 Goal
@@ -47,23 +59,9 @@ Convert ALL explicitly described pre-registration user acquisition examples file
   <rule>Use ONLY information from the attached file.</rule>
 </rules>
 
-## 🧾 Normalized Output Format (Strict)
-<format>
-Produce ONE Markdown file: normalized_research1.md.
-
-Each entry MUST follow EXACTLY this structure:
-- Product
-- Link
-- Description of product
-- Mechanism type
-- Description of mechanism
-- Acqusition
-- jtbd
-</format>
-
 ## 🧩 Canonical Template Requirement
 <template>
-The project contains a file: normalized_research_etalon.md.
+The project contains a file: etalon.md.
 This file is the CANONICAL FORMAT TEMPLATE.
 
 Before producing any output:
