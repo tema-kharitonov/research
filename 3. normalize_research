@@ -109,7 +109,7 @@ Any deviation from the template is forbidden:
 ## ✅ Final Check (Mandatory)
 <final_check>
 Before finishing:
-- confirm that EACH of the 20 files produced extracted entries
+- confirm that EACH of the 3 files produced extracted entries
 - if any file yields zero entries, re-read it entirely
 - prefer over-extraction to omission
 </final_check>
