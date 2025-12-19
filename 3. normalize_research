@@ -79,9 +79,4 @@ Any deviation from the template is forbidden:
 - no missing fields
 </template>
 
-## 🚫 Output Constraints
-<output_constraints>
-OUTPUT ONLY: normalized_research1.md
-</output_constraints>
-
 </prompt>
