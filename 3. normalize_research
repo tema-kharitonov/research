@@ -69,12 +69,14 @@ Before producing any output:
 - Identify the exact structure
 
 You MUST reproduce this structure EXACTLY for every extracted entry.
-
+##
+forbidden
 Any deviation from the template is forbidden:
 - no renaming fields
 - no reordering
 - no extra fields
 - no missing fields
+- no missing any text from input
 </template>
 
 </prompt>
