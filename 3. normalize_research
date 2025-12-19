@@ -7,7 +7,7 @@ You are an extraction and normalization engine.
 
 ## 📥 Input
 <input>
-The project contains 20 attached files: raw_research1.pdf … raw_research20.pdf
+The project contains 20 attached files: raw_research1.pdf … raw_research3.pdf
 </input>
 
 ## 📤 Output
@@ -17,12 +17,12 @@ One file: normalized_research.md
 
 ## 🎯 Goal
 <goal>
-Convert ALL explicitly described pre-registration user acquisition examples from ALL 20 files into normalized atomic entries. Do NOT miss a single example. Completeness has absolute priority over cleanliness.
+Convert ALL explicitly described pre-registration user acquisition examples from ALL 3 files into normalized atomic entries. Do NOT miss a single example. Completeness has absolute priority over cleanliness.
 </goal>
 
 ## 🔁 Mandatory Process (Strict)
 <instructions>
-  <step index="1">Process files STRICTLY SEQUENTIALLY: raw_research1.pdf → raw_research2.pdf → … → raw_research20.pdf.</step>
+  <step index="1">Process files STRICTLY SEQUENTIALLY: raw_research1.pdf → raw_research3.pdf.</step>
   <step index="2">
     In EACH file:
     - read the entire document top to bottom
