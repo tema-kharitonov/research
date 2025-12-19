@@ -1,73 +1,125 @@
-type: chat
-
 <prompt>
 
-## 🧭 Context
-<context>
-We study how products attract people who have NOT registered a business yet,
-but are already thinking about launching one (pre-registration stage), to attract users to a B2B ecosystem or B2B product when they start their business.
-</context>
+## 🧑‍💻 Role
+<role>
+You are an extraction and normalization engine.
+</role>
 
-## 🎯 Task
+## 📥 Input
+<input>
+The project contains 20 attached files: raw_research1.pdf … raw_research20.pdf
+</input>
+
+## 📤 Output
+<output>
+One file: normalized_research.md
+</output>
+
+## 🎯 Goal
 <goal>
-Extract and normalize ALL EXPLICITLY DESCRIBED user acquisition mechanisms from the attached files raw_research1–20.pdf.
+Convert ALL explicitly described pre-registration user acquisition examples from ALL 20 files into normalized atomic entries. Do NOT miss a single example. Completeness has absolute priority over cleanliness.
 </goal>
 
-## 📥 Inputs
-<inputs>
-  <files>raw_research1–20.pdf</files>
-</inputs>
-
-## ✅ Hard Rules
-<rules>
-  <rule>Write ONLY in Russian.</rule>
-  <rule>Do NOT make conclusions, generalizations, or classifications.</rule>
-  <rule>Do NOT group mechanisms.</rule>
-  <rule>Do NOT improve wording.</rule>
-  <rule>Do NOT add anything from yourself.</rule>
-  <rule>If the source text contains uncertainty, keep it exactly as-is.</rule>
-  <rule>Use ONLY information from the attached files.</rule>
-  <rule>If the same data repeats in different files, duplicates are allowed.</rule>
-</rules>
-
-## 🧩 Definition: “Acquisition Mechanism”
-<definition>
-Any explicitly described action, tool, format, channel, or product mechanism
-through which a user first encounters the product BEFORE business registration.
-</definition>
-
-## 🛠 Instructions
+## 🔁 Mandatory Process (Strict)
 <instructions>
-  <step index="1">Read all attached files raw_research1–20.pdf.</step>
-  <step index="2">Find ALL explicitly described acquisition mechanisms (per the definition above).</step>
-  <step index="3">For each mechanism, create ONE separate atomic list item.</step>
-  <step index="4">Do NOT merge, group, classify, or rewrite mechanisms.</step>
-  <step index="5">If any field is not present in the source, leave it empty (do not infer).</step>
+  <step index="1">Process files STRICTLY SEQUENTIALLY: raw_research1.pdf → raw_research2.pdf → … → raw_research20.pdf.</step>
+  <step index="2">
+    In EACH file:
+    - read the entire document top to bottom
+    - extract EVERY fragment that describes:
+      • Product
+      • Link
+      • Description of product
+      • Mechanism type
+      • Description of mechanism
+      • Acqusition
+      • jtbd
+      • Source
+  </step>
+  <step index="3">
+    EACH mechanism = ONE atomic entry.
+    - If a paragraph contains multiple mechanisms — split them.
+    - If mechanisms repeat across files — duplicates are allowed.
+  </step>
+  <step index="4">NEVER decide importance. If in doubt — extract.</step>
 </instructions>
 
-## 📄 Output Format (STRICT)
-<output>
-  <format>File nornalized_research.md In file: Bullet list. Each bullet = ONE atomic example. No other structure.</format>
-  <item_template>
-    - Product:
-      [product name]
+## ✅ Strict Rules
+<rules>
+  <rule>Write ONLY in Russian.</rule>
+  <rule>Do NOT invent, assume, interpret, summarize, or generalize.</rule>
+  <rule>Do NOT classify, group, or merge mechanisms.</rule>
+  <rule>Do NOT improve wording.</rule>
+  <rule>You MAY minimally cut or rearrange text ONLY to isolate one mechanism.</rule>
+  <rule>If information is missing — leave the field empty.</rule>
+  <rule>If the source text is vague or uncertain — keep it vague.</rule>
+  <rule>Use ONLY information from the attached files.</rule>
+</rules>
 
-    - Product URL:
-      [official website URL if present in the files]
+## 🧾 Normalized Output Format (Strict)
+<format>
+Produce ONE Markdown file: normalized_research.md.
 
-    - Mechanism (as written in source):
-      [verbatim or максимально близко к источнику]
+Each entry MUST follow EXACTLY this structure:
 
-    - Discovery:
-      [how the user first encounters it, if stated]
+- Product
+  &lt;product name as written in source, or "unknown"&gt;
 
-    - User outcome:
-      [specific outcome / artifact BEFORE registration]
+- Link
+  &lt;official URL if explicitly present in source, otherwise empty&gt;
 
-    - Source:
-      [links as provided in the raw_research files]
-  </item_template>
-  <deliverable>normalized_research.md</deliverable>
-</output>
+- Description of product
+  &lt;максимально близко к источнику, например, после "Описание"&gt;
+
+- Mechanism type
+  &lt;бери строго из источника&gt;
+
+- Description of mechanism
+  &lt;verbatim or максимально близко к источнику description&gt;
+
+- Acqusition
+  &lt;get from Discovery&gt;
+
+- jtbd
+  &lt;get from User outcome&gt;
+
+- Source
+  &lt;links or references exactly as provided in the source files&gt;
+</format>
+
+## 🧩 Canonical Template Requirement
+<template>
+The project contains a file: normalized_research_etalon.md.
+This file is the CANONICAL FORMAT TEMPLATE.
+
+Before producing any output:
+- Open normalized_research_etalon.md
+- Identify the exact structure of ONE atomic entry (field names, order, punctuation, spacing, blank lines)
+
+You MUST reproduce this structure EXACTLY for every extracted entry.
+
+Any deviation from the template is forbidden:
+- no renaming fields
+- no reordering
+- no extra fields
+- no missing fields
+- no formatting changes
+</template>
+
+## ✅ Final Check (Mandatory)
+<final_check>
+Before finishing:
+- confirm that EACH of the 20 files produced extracted entries
+- if any file yields zero entries, re-read it entirely
+- prefer over-extraction to omission
+</final_check>
+
+## 🚫 Output Constraints
+<output_constraints>
+OUTPUT ONLY: normalized_research.md
+No explanations.
+No summaries.
+No commentary.
+</output_constraints>
 
 </prompt>
