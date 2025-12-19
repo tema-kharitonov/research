@@ -47,7 +47,7 @@ through which a user first encounters the product BEFORE business registration.
 
 ## 📄 Output Format (STRICT)
 <output>
-  <format>Bullet list. Each bullet = ONE atomic example. No other structure.</format>
+  <format>File nornalized_research.md In file: Bullet list. Each bullet = ONE atomic example. No other structure.</format>
   <item_template>
     - Product:
       [product name]
