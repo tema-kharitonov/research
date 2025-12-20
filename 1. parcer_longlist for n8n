@@ -1,1 +1,53 @@
+<prompt>
+<task>
+Create a preliminary long list of products and companies.
+Generate 20 urls.
+</task>
 
+<input>
+{{$json.task_1}}
+</input>
+
+<output>
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string" },
+          "title": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["url", "title", "description"]
+      }
+    }
+  },
+  "required": ["items"]
+}
+</output>
+
+<instruction>
+1. Получи из <input>, какие продукты и компании ты ищешь
+2. Найди компанию, которая соответствует критериям
+3. Запиши
+- "url": сайт без hhtp или www, только [домент].[доменная зона]
+- "title": название компании или продукта
+- "description": почему эта компания соответствует описанию из <input>
+4. Запиши так 25 компаний
+</instruction>
+
+<restrictions>
+  <item>Do NOT write www or http or https into "url"</item>
+  <item>Do NOT analyze CJM</item>
+  <item>Do NOT estimate metrics</item>
+  <item>Do NOT validate effectiveness</item>
+  <item>Do NOT analyze mechanics deeply</item>
+  <item>Do NOT write about paid marketing channels</item>
+  <item>Do NOT structure the result as a report</item>
+  <item>Do NOT analyze government, offline, regulation, or infrastructure products and companies.
+</restrictions>
+
+</prompt>
