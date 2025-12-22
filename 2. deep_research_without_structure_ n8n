@@ -31,41 +31,35 @@ description
 
 analysis_object describes a GENERAL acquisition or growth mechanism.
 
-You must describe AT MOST 3 CONCRETE real-world examples of how this analysis_object
-is implemented by the given product. Providing more than 3 examples is a violation of the task.
+You must describe EXACTLY ONE concrete, real-world example of how this analysis_object
+is implemented by the given product.
 
 CRITICAL RESTRICTIONS (MANDATORY):
 - Do NOT invent or speculate about mechanisms.
 - Do NOT describe hypothetical, assumed, or “likely” tactics.
-- Only describe mechanisms that are:
+- Only describe a mechanism that is:
   a) explicitly mentioned in publicly available sources, OR
   b) directly observable on the product itself (website, onboarding, documentation, UI).
 
-EACH described mechanism MUST be supported by one or more public sources.
-If you cannot provide a confirming source link for a mechanism,
-YOU MUST NOT include that mechanism.
+The described mechanism MUST be supported by one or more public sources.
+If you cannot provide a confirming source link,
+YOU MUST NOT include the example.
 
-If fewer than 3 confirmed examples exist, return ONLY the confirmed ones.
-Returning 2 examples is acceptable.
-Returning 1 example is acceptable.
-Returning 0 examples is acceptable.
+If no confirmed example exists, return an empty-but-valid JSON object
+according to the schema rules below.
 
-Each example must be a distinct, verifiable mechanism or tactic.
-All examples MUST be written inside the single string field "free".
+The example MUST be written inside the single string field "free".
 
-If multiple examples are provided, separate them clearly using numbered headings:
-Example 1
-Example 2
-Example 3
-
-Inside EACH example you MUST include the following sections
+Inside the example you MUST include the following sections
 using EXACT headings (case-sensitive):
 
+Example 1
 description of the example analysis object
 parameter_1
 parameter_2
 parameter_3
 parameter_4
+source
 
 Write reasoning as plain text with clear headings.
 Do NOT use markdown.
@@ -73,8 +67,8 @@ Do NOT use markdown.
 The field "example_analysis_object" in output MUST be copied verbatim
 from the input variable analysis_object.
 
-The output field "source" MUST contain ALL unique source URLs used across
-all examples in "free", combined into a single comma-separated string.
+The output field "source" MUST contain ALL unique source URLs used
+in the "free" field, combined into a single comma-separated string.
 Do NOT add any extra sources that are not referenced in "free".
 
 Output MUST match the JSON schema exactly.
@@ -82,7 +76,7 @@ Output ONLY valid JSON.
 Do NOT include any text before or after the JSON object.
 
 Return ONLY valid JSON. No apologies. No explanations. No markdown.
-If inputs are missing, return an empty-but-valid JSON object following the schema.
+
 Output schema:
 {
   "chatid": number,
@@ -95,34 +89,30 @@ Output schema:
   "source": string
 }
 
-Rules for field "free"
-Headings MUST be copied EXACTLY as written below, without changes,
-additional words, punctuation, or different capitalization:
+Rules for field "free":
 - Must be a single string
-- Must contain clearly separated sections in the following order:
+- MUST contain ONLY ONE example
+- MUST follow this exact structure and order:
   Example 1
   description of the example analysis object
   parameter_1
   parameter_2
   parameter_3
   parameter_4
-  source
-- Repeat the same structure for Example 2 / Example 3 if present
-- If an example is not provided, do NOT include its heading block
 
 Rules for field "source":
 - Must be a single string
 - Must contain one or more public URLs
-- URLs must confirm the mechanisms described in "free"
+- URLs must confirm the mechanism described in "free"
 - Multiple URLs must be separated by commas
 
 chatid and rsrchid MUST be numbers, not strings.
 
-If any required input value is missing or empty (including description),
-you MUST still return valid JSON matching the schema.
-In that case:
+If any required input value is missing or empty (including description):
+- return valid JSON matching the schema
 - set "free" to an empty string
 - set "source" to an empty string
-- do NOT include any examples
+- do NOT include Example 1
 - copy all other fields as-is from input
+
 Never refuse, never apologize, never ask questions.
