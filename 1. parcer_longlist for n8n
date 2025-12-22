@@ -1,53 +1,41 @@
-<prompt>
-<task>
-Create a preliminary long list of products and companies.
-Generate 20 urls.
-</task>
+You are generating a structured dataset.
+Task:
+Create a preliminary long list of companies or products based on the user description.
+Generate exactly 20 results.
 
-<input>
-{{$json.task_1}}
-</input>
+User description:
+[Execute previous nodes for preview]
 
-<output>
+Existing URLs (DO NOT include these):
+[Execute previous nodes for preview]
+
+Rules:
+- Output ONLY valid JSON
+- No text before or after JSON
+- Do not use markdown
+- Do not add comments
+- DO NOT include any URLs from the existing URLs list above
+- All URLs must be NEW and different from existing ones
+
+Output format:
 {
-  "type": "object",
-  "properties": {
-    "items": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "url": { "type": "string" },
-          "title": { "type": "string" },
-          "description": { "type": "string" }
-        },
-        "required": ["url", "title", "description"]
-      }
+  "items": [
+    {
+      "url": "domain.tld",
+      "title": "Company or product name",
+      "description": "Why this company matches the user description"
     }
-  },
-  "required": ["items"]
+  ]
 }
-</output>
 
-<instruction>
-1. Получи из <input>, какие продукты и компании ты ищешь
-2. Найди компанию, которая соответствует критериям
-3. Запиши
-- "url": сайт без hhtp или www, только [домент].[доменная зона]
-- "title": название компании или продукта
-- "description": почему эта компания соответствует описанию из <input>
-4. Запиши так 25 компаний
-</instruction>
-
-<restrictions>
-  <item>Do NOT write www or http or https into "url"</item>
-  <item>Do NOT analyze CJM</item>
-  <item>Do NOT estimate metrics</item>
-  <item>Do NOT validate effectiveness</item>
-  <item>Do NOT analyze mechanics deeply</item>
-  <item>Do NOT write about paid marketing channels</item>
-  <item>Do NOT structure the result as a report</item>
-  <item>Do NOT analyze government, offline, regulation, or infrastructure products and companies.
-</restrictions>
-
-</prompt>
+Constraints:
+- Exactly 20 items in the array
+- Do not add produt, if you cannot find the url
+- "url" must be without http, https, www, paths, or slashes
+- Do NOT analyze CJM
+- Do NOT estimate metrics
+- Do NOT validate effectiveness
+- Do NOT analyze mechanics deeply
+- Do NOT write about paid marketing channels
+- Do NOT structure the result as a report
+- Do NOT include government, offline, regulatory, or infrastructure companies
