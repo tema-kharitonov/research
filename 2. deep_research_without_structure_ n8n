@@ -94,7 +94,9 @@ Output schema:
   "source": string
 }
 
-Rules for field "free":
+Rules for field "free"
+Headings MUST be copied EXACTLY as written below, without changes,
+additional words, punctuation, or different capitalization:
 - Must be a single string
 - Must contain clearly separated sections in the following order:
   Example 1
