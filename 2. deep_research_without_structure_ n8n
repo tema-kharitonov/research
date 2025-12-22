@@ -6,7 +6,7 @@ chatid {{$json.chatid}}
 rsrchid {{$json.rsrchid}}
 title {{$json.title}}
 url {{$json.url}}
-discription {{$json.description}}
+discription {{$json.discription}}
 analysis_object {{$json.deep}}
 parameter_1 {{$json.par_1}}
 parameter_2 {{$json.par_2}}
