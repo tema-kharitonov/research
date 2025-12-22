@@ -1,0 +1,108 @@
+Task:
+Analyze a single product using input variables provided by n8n and return the result in a strict JSON schema.
+
+Input (from n8n variables):
+chatid {{$json.chatid}}
+rsrchid {{$json.rsrchid}}
+title {{$json.title}}
+url {{$json.url}}
+description {{$json.description}}
+analysis_object {{$json.deep}}
+parameter_1 {{$json.par_1}}
+parameter_2 {{$json.par_2}}
+parameter_3 {{$json.par_3}}
+parameter_4 {{$json.par_4}}
+
+Instructions:
+Read ALL input values strictly from n8n variables.
+Do NOT invent, infer, extrapolate, or modify any input values.
+
+The following fields MUST be copied verbatim from input to output:
+chatid
+rsrchid
+title
+url
+description
+
+Build research for the single product described by:
+title
+url
+description
+
+analysis_object describes a GENERAL acquisition or growth mechanism.
+
+You must describe down to 3 CONCRETE real-world examples of how this analysis_object
+is implemented by the given product.
+
+CRITICAL RESTRICTIONS (MANDATORY):
+- Do NOT invent or speculate about mechanisms.
+- Do NOT describe hypothetical, assumed, or “likely” tactics.
+- Only describe mechanisms that are:
+  a) explicitly mentioned in publicly available sources, OR
+  b) directly observable on the product itself (website, onboarding, documentation, UI).
+
+EACH described mechanism MUST be supported by one or more public sources.
+If you cannot provide a confirming source link for a mechanism,
+YOU MUST NOT include that mechanism.
+
+If fewer than 3 confirmed examples exist, return ONLY the confirmed ones.
+Returning 1 example is acceptable.
+Returning 0 examples is acceptable.
+
+Each example must be a distinct, verifiable mechanism or tactic.
+All examples MUST be written inside the single string field "free".
+
+If multiple examples are provided, separate them clearly using numbered headings:
+Example 1
+Example 2
+Example 3
+
+Inside EACH example you MUST include:
+- description of the example analysis object
+- parameter_1
+- parameter_2
+- parameter_3
+- parameter_4
+- source (one or more URLs confirming this mechanism)
+
+Write reasoning as plain text with clear headings.
+Do NOT use markdown.
+
+The field "example_analysis_object" in output MUST be copied verbatim
+from the input variable analysis_object.
+
+Output MUST match the JSON schema exactly.
+Output ONLY valid JSON.
+Do NOT include any text before or after the JSON object.
+
+Output schema:
+{
+  "chatid": number,
+  "rsrchid": number,
+  "example_analysis_object": string,
+  "free": string,
+  "title": string,
+  "url": string,
+  "description": string,
+  "source": string
+}
+
+Rules for field "free":
+- Must be a single string
+- Must contain clearly separated sections in the following order:
+  Example 1
+  description of example analysis object
+  parameter_1
+  parameter_2
+  parameter_3
+  parameter_4
+  source
+  (repeat structure for Example 2 / Example 3 if present)
+
+Rules for field "source":
+- Must be a single string
+- Must contain one or more public URLs
+- URLs must confirm the mechanisms described in "free"
+- Multiple URLs may be separated by commas
+
+chatid and rsrchid MUST be numbers, not strings.
