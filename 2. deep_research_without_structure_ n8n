@@ -42,8 +42,8 @@ CRITICAL RESTRICTIONS (MANDATORY):
   b) directly observable on the product itself (website, onboarding, documentation, UI).
 
 The described mechanism MUST be supported by one or more public sources.
-If you cannot provide a confirming source link,
-YOU MUST NOT describe any mechanism.
+If you cannot provide a highly reliable confirming source link,
+you SHOULD return an empty result.
 
 If no confirmed example exists:
 - return an empty-but-valid JSON object following the schema
@@ -65,6 +65,8 @@ parameter_4
 Do NOT include source URLs inside "free".
 
 Rules for field "source":
+- Product pages such as pricing pages, onboarding flows,
+official blogs, or help centers are valid confirming sources.
 - Must be a single string
 - Must contain one or more public URLs
 - URLs must confirm the mechanism described in "free"
