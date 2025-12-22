@@ -58,19 +58,25 @@ Example 1
 Example 2
 Example 3
 
-Inside EACH example you MUST include:
-- description of the example analysis object
-- parameter_1
-- parameter_2
-- parameter_3
-- parameter_4
-- source (one or more URLs confirming this mechanism)
+Inside EACH example you MUST include the following sections
+using EXACT headings (case-sensitive):
+
+description of the example analysis object
+parameter_1
+parameter_2
+parameter_3
+parameter_4
+source
 
 Write reasoning as plain text with clear headings.
 Do NOT use markdown.
 
 The field "example_analysis_object" in output MUST be copied verbatim
 from the input variable analysis_object.
+
+The output field "source" MUST contain ALL unique source URLs used across
+all examples in "free", combined into a single comma-separated string.
+Do NOT add any extra sources that are not referenced in "free".
 
 Output MUST match the JSON schema exactly.
 Output ONLY valid JSON.
@@ -92,18 +98,19 @@ Rules for field "free":
 - Must be a single string
 - Must contain clearly separated sections in the following order:
   Example 1
-  description of example analysis object
+  description of the example analysis object
   parameter_1
   parameter_2
   parameter_3
   parameter_4
   source
-  (repeat structure for Example 2 / Example 3 if present)
+- Repeat the same structure for Example 2 / Example 3 if present
+- If an example is not provided, do NOT include its heading block
 
 Rules for field "source":
 - Must be a single string
 - Must contain one or more public URLs
 - URLs must confirm the mechanisms described in "free"
-- Multiple URLs may be separated by commas
+- Multiple URLs must be separated by commas
 
 chatid and rsrchid MUST be numbers, not strings.
