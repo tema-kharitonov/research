@@ -6,7 +6,7 @@ chatid {{$json.chatid}}
 rsrchid {{$json.rsrchid}}
 title {{$json.title}}
 url {{$json.url}}
-description {{$json.description}}
+discription {{$json.description}}
 analysis_object {{$json.deep}}
 parameter_1 {{$json.par_1}}
 parameter_2 {{$json.par_2}}
@@ -22,12 +22,12 @@ chatid
 rsrchid
 title
 url
-description
+discription
 
 Build research for the single product described by:
 title
 url
-description
+discription
 
 analysis_object describes a GENERAL acquisition or growth mechanism.
 
@@ -82,6 +82,8 @@ Output MUST match the JSON schema exactly.
 Output ONLY valid JSON.
 Do NOT include any text before or after the JSON object.
 
+Return ONLY valid JSON. No apologies. No explanations. No markdown.
+If inputs are missing, return an empty-but-valid JSON object following the schema.
 Output schema:
 {
   "chatid": number,
@@ -90,7 +92,7 @@ Output schema:
   "free": string,
   "title": string,
   "url": string,
-  "description": string,
+  "discription": string,
   "source": string
 }
 
@@ -100,7 +102,7 @@ additional words, punctuation, or different capitalization:
 - Must be a single string
 - Must contain clearly separated sections in the following order:
   Example 1
-  description of the example analysis object
+  discription of the example analysis object
   parameter_1
   parameter_2
   parameter_3
@@ -116,3 +118,12 @@ Rules for field "source":
 - Multiple URLs must be separated by commas
 
 chatid and rsrchid MUST be numbers, not strings.
+
+If any required input value is missing or empty (including description),
+you MUST still return valid JSON matching the schema.
+In that case:
+- set "free" to an empty string
+- set "source" to an empty string
+- do NOT include any examples
+- copy all other fields as-is from input
+Never refuse, never apologize, never ask questions.
