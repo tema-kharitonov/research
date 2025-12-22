@@ -1,7 +1,12 @@
 Task:
-Analyze a single product using input variables provided by n8n and return the result in a strict JSON schema.
+Analyze a single product using input variables provided by n8n
+and return the result in a strict JSON schema.
 
-Input (from n8n variables):
+────────────────────────
+INPUT
+────────────────────────
+
+Input values are provided strictly via n8n variables:
 chatid {{$json.chatid}}
 rsrchid {{$json.rsrchid}}
 title {{$json.title}}
@@ -13,7 +18,10 @@ parameter_2 {{$json.par_2}}
 parameter_3 {{$json.par_3}}
 parameter_4 {{$json.par_4}}
 
-Instructions:
+────────────────────────
+INSTRUCTIONS
+────────────────────────
+
 Read ALL input values strictly from n8n variables.
 Do NOT invent, infer, extrapolate, or modify any input values.
 
@@ -24,57 +32,76 @@ title
 url
 description
 
-Build research for the single product described by:
+You are researching a product. Build research ONLY for the single product described by:
 title
 url
 description
 
-analysis_object describes a GENERAL acquisition or growth mechanism.
-
-You must describe AT MOST ONE CONCRETE real-world example of how this analysis_object
-is implemented by the given product.
-
-CRITICAL RESTRICTIONS (MANDATORY):
-- Do NOT invent or speculate about mechanisms.
-- Do NOT describe hypothetical, assumed, or “likely” tactics.
-- Only describe mechanisms that are:
-  a) explicitly mentioned in publicly available sources, OR
-  b) directly observable on the product itself (website, onboarding, documentation, UI).
-
-The described mechanism MUST be supported by one or more public sources.
-If you cannot provide a highly reliable confirming source link,
-you SHOULD return an empty result.
-
-If no confirmed example exists:
-- return an empty-but-valid JSON object following the schema
-- set "free" to an empty string
-- set "source" to an empty string
-
-Rules for field "free":
-- Must be a single string
-- Must describe ONLY ONE example
-- Must use the following structure and headings EXACTLY (case-sensitive):
-
-Example 1
-description of the example analysis object
+You have a research task described in:
+analysis_object
+When performing the research task, you MUST describe the research parameters:
 parameter_1
 parameter_2
 parameter_3
 parameter_4
+You MUST structure the analysis strictly around these parameters.
 
+You must describe AT MOST ONE concrete, real-world example
+of how the analysis_object is implemented by this product.
+
+────────────────────────
+RESTRICTIONS (MANDATORY)
+────────────────────────
+
+Do NOT invent or speculate about the research task.
+Do NOT describe hypothetical, assumed, or “likely” examples.
+Do NOT generalize beyond what can be verified.
+
+You may describe a mechanism ONLY if it is:
+a) explicitly mentioned in publicly available sources, OR
+b) directly observable on the product itself
+(website, onboarding, documentation, UI, pricing pages).
+
+The described mechanism MUST be supported by one or more
+highly reliable public sources.
+
+If you cannot provide a reliable confirming source link,
+you SHOULD return an empty result.
+
+If no confirmed example exists:
+return an empty-but-valid JSON object
+set "free" to an empty string
+set "source" to an empty string
+
+────────────────────────
+FORMAT RULES
+────────────────────────
+
+Rules for field "free":
+Must be a single string
+Must describe ONLY ONE example
+
+Must follow EXACTLY this structure and headings
+(case-sensitive, no extra text):
+- Example:
+description of the example found within the research task
+- parameter_1
+- parameter_2
+- parameter_3
+- parameter_4
 Do NOT include source URLs inside "free".
 
 Rules for field "source":
-- Product pages such as pricing pages, onboarding flows,
-official blogs, or help centers are valid confirming sources.
 - Must be a single string
 - Must contain one or more public URLs
-- URLs must confirm the mechanism described in "free"
+- URLs must confirm the example described in "free"
+- Product pages such as pricing pages, onboarding flows,
+official blogs, and help centers are valid sources
 - Multiple URLs must be separated by commas
-- Do NOT include sources that are not directly referenced by the example
 
-The field "example_analysis_object" in output MUST be copied verbatim
-from the input variable analysis_object.
+────────────────────────
+OUTPUT
+────────────────────────
 
 Output MUST match the JSON schema exactly.
 Output ONLY valid JSON.
@@ -83,14 +110,13 @@ No apologies. No explanations. No markdown.
 
 Output schema:
 {
-  "chatid": number,
-  "rsrchid": number,
-  "example_analysis_object": string,
-  "free": string,
-  "title": string,
-  "url": string,
-  "description": string,
-  "source": string
+"chatid": number,
+"rsrchid": number,
+"free": string,
+"title": string,
+"url": string,
+"description": string,
+"source": string
 }
 
 chatid and rsrchid MUST be numbers, not strings.
