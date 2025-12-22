@@ -6,7 +6,7 @@ chatid {{$json.chatid}}
 rsrchid {{$json.rsrchid}}
 title {{$json.title}}
 url {{$json.url}}
-description {{ $json.description }}
+description {{$json.description}}
 analysis_object {{$json.deep}}
 parameter_1 {{$json.par_1}}
 parameter_2 {{$json.par_2}}
@@ -31,27 +31,29 @@ description
 
 analysis_object describes a GENERAL acquisition or growth mechanism.
 
-You must describe EXACTLY ONE concrete, real-world example of how this analysis_object
+You must describe AT MOST ONE CONCRETE real-world example of how this analysis_object
 is implemented by the given product.
 
 CRITICAL RESTRICTIONS (MANDATORY):
 - Do NOT invent or speculate about mechanisms.
 - Do NOT describe hypothetical, assumed, or “likely” tactics.
-- Only describe a mechanism that is:
+- Only describe mechanisms that are:
   a) explicitly mentioned in publicly available sources, OR
   b) directly observable on the product itself (website, onboarding, documentation, UI).
 
 The described mechanism MUST be supported by one or more public sources.
 If you cannot provide a confirming source link,
-YOU MUST NOT include the example.
+YOU MUST NOT describe any mechanism.
 
-If no confirmed example exists, return an empty-but-valid JSON object
-according to the schema rules below.
+If no confirmed example exists:
+- return an empty-but-valid JSON object following the schema
+- set "free" to an empty string
+- set "source" to an empty string
 
-The example MUST be written inside the single string field "free".
-
-Inside the example you MUST include the following sections
-using EXACT headings (case-sensitive):
+Rules for field "free":
+- Must be a single string
+- Must describe ONLY ONE example
+- Must use the following structure and headings EXACTLY (case-sensitive):
 
 Example 1
 description of the example analysis object
@@ -59,23 +61,23 @@ parameter_1
 parameter_2
 parameter_3
 parameter_4
-source
 
-Write reasoning as plain text with clear headings.
-Do NOT use markdown.
+Do NOT include source URLs inside "free".
+
+Rules for field "source":
+- Must be a single string
+- Must contain one or more public URLs
+- URLs must confirm the mechanism described in "free"
+- Multiple URLs must be separated by commas
+- Do NOT include sources that are not directly referenced by the example
 
 The field "example_analysis_object" in output MUST be copied verbatim
 from the input variable analysis_object.
 
-The output field "source" MUST contain ALL unique source URLs used
-in the "free" field, combined into a single comma-separated string.
-Do NOT add any extra sources that are not referenced in "free".
-
 Output MUST match the JSON schema exactly.
 Output ONLY valid JSON.
 Do NOT include any text before or after the JSON object.
-
-Return ONLY valid JSON. No apologies. No explanations. No markdown.
+No apologies. No explanations. No markdown.
 
 Output schema:
 {
@@ -89,30 +91,7 @@ Output schema:
   "source": string
 }
 
-Rules for field "free":
-- Must be a single string
-- MUST contain ONLY ONE example
-- MUST follow this exact structure and order:
-  Example 1
-  description of the example analysis object
-  parameter_1
-  parameter_2
-  parameter_3
-  parameter_4
-
-Rules for field "source":
-- Must be a single string
-- Must contain one or more public URLs
-- URLs must confirm the mechanism described in "free"
-- Multiple URLs must be separated by commas
-
 chatid and rsrchid MUST be numbers, not strings.
 
-If any required input value is missing or empty (including description):
-- return valid JSON matching the schema
-- set "free" to an empty string
-- set "source" to an empty string
-- do NOT include Example 1
-- copy all other fields as-is from input
-
-Never refuse, never apologize, never ask questions.
+Never refuse.
+Never ask questions.
