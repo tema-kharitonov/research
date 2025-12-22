@@ -31,7 +31,7 @@ description
 
 analysis_object describes a GENERAL acquisition or growth mechanism.
 
-You must describe down to 3 CONCRETE real-world examples of how this analysis_object
+You must describe 3 CONCRETE real-world examples of how this analysis_object
 is implemented by the given product.
 
 CRITICAL RESTRICTIONS (MANDATORY):
@@ -46,6 +46,7 @@ If you cannot provide a confirming source link for a mechanism,
 YOU MUST NOT include that mechanism.
 
 If fewer than 3 confirmed examples exist, return ONLY the confirmed ones.
+Returning 2 example is acceptable.
 Returning 1 example is acceptable.
 Returning 0 examples is acceptable.
 
