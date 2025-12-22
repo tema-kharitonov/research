@@ -31,8 +31,8 @@ description
 
 analysis_object describes a GENERAL acquisition or growth mechanism.
 
-You must describe 3 CONCRETE real-world examples of how this analysis_object
-is implemented by the given product.
+You must describe AT MOST 3 CONCRETE real-world examples of how this analysis_object
+is implemented by the given product. Providing more than 3 examples is a violation of the task.
 
 CRITICAL RESTRICTIONS (MANDATORY):
 - Do NOT invent or speculate about mechanisms.
