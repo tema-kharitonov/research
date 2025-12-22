@@ -1,97 +1,41 @@
-<prompt>
+You are generating a structured dataset.
+Task:
+Create a preliminary long list of companies or products based on the user description.
+Generate exactly 20 results.
 
-## 🧭 Context
-<context>
-You work for a leading B2B SaaS company in Russia.
-You are studying how products attract people who have NOT registered a business yet,
-but are already thinking about launching one
-(pre-registration / pre-entrepreneur stage),
-in order to later bring them into a B2B ecosystem.
-</context>
+User description:
+[Execute previous nodes for preview]
 
-## 🎯 Task
-<goal>
-Build an evidence-based, raw list of user acquisition mechanisms
-for products from the provided longlist.
+Existing URLs (DO NOT include these):
+[Execute previous nodes for preview]
 
-In this run, analyze ONLY the products listed in the file: longlist1.md.
-</goal>
+Rules:
+- Output ONLY valid JSON
+- No text before or after JSON
+- Do not use markdown
+- Do not add comments
+- DO NOT include any URLs from the existing URLs list above
+- All URLs must be NEW and different from existing ones
 
-## 📥 Inputs
-<inputs>
-  <longlist_file>longlist1.md</longlist_file>
-  <scope_restriction>
-    Analyze ONLY products from longlist1.md.
-    Ignore longlist2–20.md.
-  </scope_restriction>
-</inputs>
+Output format:
+{
+  "items": [
+    {
+      "url": "domain.tld",
+      "title": "Company or product name",
+      "description": "Why this company matches the user description"
+    }
+  ]
+}
 
-## 🧱 Hard Rules
-<rules>
-  <rule>Write ONLY in Russian.</rule>
-  <rule>Do NOT format the output as a report, article, or presentation.</rule>
-  <rule>Do NOT use XML, HTML, or pseudo-markup in the OUTPUT.</rule>
-  <rule>Do NOT repeat or paraphrase the wording of this assignment in the OUTPUT.</rule>
-  <rule>Do NOT make conclusions, generalizations, or recommendations.</rule>
-  <rule>
-    If there is no open data for a product or a specific mechanism,
-    SKIP it entirely.
-    Do NOT invent, assume, or extrapolate anything.
-  </rule>
-</rules>
-
-## 🔎 Sources Policy
-<sources_policy>
-  <allowed_sources>
-    <item>Official product website</item>
-    <item>Company blog</item>
-    <item>Help or documentation pages</item>
-    <item>Press releases</item>
-    <item>Founder interviews</item>
-    <item>Investor materials</item>
-    <item>Reputable industry or business media</item>
-  </allowed_sources>
-
-  <requirements>
-    <item>Use ONLY reliable open sources.</item>
-    <item>Every factual statement must have a source link placed рядом with it.</item>
-  </requirements>
-</sources_policy>
-
-## 🧾 Output Format (STRICT)
-<output_format>
-For EACH product:
-
-Product name — link to the official website
-
-Short product description (1–2 sentences):
-— what the product is
-— who it is for
-— MUST include a source link
-
-User acquisition mechanisms (ONLY if data exists):
-
-- Mechanism:
-  what exactly the product does
-  (tool / content / service / community / etc.)
-
-  Discovery:
-  how the user first encounters this mechanism
-
-  User outcome:
-  the concrete artifact or benefit the user receives
-  BEFORE business registration
-
-  Sources:
-  — link 1
-  — link 2 (if available)
-
-(Repeat the mechanism block for each identified mechanism.)
-
-Optional:
-At the end of each product, you may add ONE short label
-(e.g., free tool / content / community / ecosystem),
-label only, without explanation.
-</output_format>
-
-</prompt>
+Constraints:
+- Exactly 20 items in the array
+- Do not add produt, if you cannot find the url
+- "url" must be without http, https, www, paths, or slashes
+- Do NOT analyze CJM
+- Do NOT estimate metrics
+- Do NOT validate effectiveness
+- Do NOT analyze mechanics deeply
+- Do NOT write about paid marketing channels
+- Do NOT structure the result as a report
+- Do NOT include government, offline, regulatory, or infrastructure companies
