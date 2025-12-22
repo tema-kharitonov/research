@@ -46,7 +46,7 @@ If you cannot provide a confirming source link for a mechanism,
 YOU MUST NOT include that mechanism.
 
 If fewer than 3 confirmed examples exist, return ONLY the confirmed ones.
-Returning 2 example is acceptable.
+Returning 2 examples is acceptable.
 Returning 1 example is acceptable.
 Returning 0 examples is acceptable.
 
