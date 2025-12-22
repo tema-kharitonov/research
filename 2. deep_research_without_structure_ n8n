@@ -6,7 +6,7 @@ chatid {{$json.chatid}}
 rsrchid {{$json.rsrchid}}
 title {{$json.title}}
 url {{$json.url}}
-discription {{$json.discription}}
+description {{$json.description}}
 analysis_object {{$json.deep}}
 parameter_1 {{$json.par_1}}
 parameter_2 {{$json.par_2}}
@@ -22,12 +22,12 @@ chatid
 rsrchid
 title
 url
-discription
+description
 
 Build research for the single product described by:
 title
 url
-discription
+description
 
 analysis_object describes a GENERAL acquisition or growth mechanism.
 
@@ -92,7 +92,7 @@ Output schema:
   "free": string,
   "title": string,
   "url": string,
-  "discription": string,
+  "description": string,
   "source": string
 }
 
@@ -102,7 +102,7 @@ additional words, punctuation, or different capitalization:
 - Must be a single string
 - Must contain clearly separated sections in the following order:
   Example 1
-  discription of the example analysis object
+  description of the example analysis object
   parameter_1
   parameter_2
   parameter_3
