@@ -1,0 +1,189 @@
+type: deep
+
+# Language Requirement
+The prompt itself must be written in English.
+The final research report must be written entirely in Russian.
+
+# Critical Rules
+- ❌ Do NOT use CDATA.
+- ❌ Do NOT invent data.
+- ✅ Every number must have a source link.
+- ✅ Data must be from 2023–2026 only.
+- ✅ If no reliable data is found, write: “данные не нашли, в результате не уверен”.
+- ✅ Final deliverable must be provided in .doc and .pdf formats.
+- ✅ The final report must be fully cleaned from prompt/system text and ready for external delivery.
+
+# Execution Order
+
+1) Ask the user:
+   “For which country should the research be conducted?”
+2) Do NOT proceed until the user answers.
+3) Execute each section strictly one by one.
+4) After completing each section:
+   - Verify that every numeric claim follows the rules in “How to Work with Data”.
+   - Fix violations before moving forward.
+5) ❌ Do NOT use tables with more than 3 columns.
+
+# How to Work with Data
+
+1) First use the predefined list of sources (if provided).
+2) If missing, search publicly available reliable sources.
+3) Never fabricate data.
+4) Always attach the source immediately after each number.
+5) Only use 2023–2026 data.
+6) If unavailable → “данные не нашли, в результате не уверен”.
+
+# Research Objective
+
+Conduct a structured country market analysis for launching Russian B2B SaaS products.
+
+Focus areas:
+- Market potential
+- Risks
+- Regulatory environment
+- Digital infrastructure
+- Competitive landscape
+- Investment feasibility
+
+# Target Niches
+
+- EDI / HR EDI (document and HR management)
+- E-reporting and tax services
+- KYC / compliance and counterpart verification
+- CLM / contract lifecycle management and archiving
+- AI functions (OCR, auto-fill, scoring)
+- Video conference solutions
+
+---
+
+# Final Research Structure
+
+## 1) Economic Scale and Structure
+
+Include:
+- Nominal GDP
+- GDP (PPP)
+- GDP per capita
+- SME share of GDP
+- Sectoral structure (services, IT, industry, etc.)
+
+Each number must have a source.
+
+---
+
+## 2) Addressable Market Size (TAM / SAM)
+
+Market size must be calculated:
+- In monetary terms
+- In number of companies/users
+
+Required:
+- Total number of companies
+- Number of large and state-owned enterprises
+- Number of micro businesses
+- Number of digitized SMB companies
+
+Accuracy requirement:
+- Estimation precision within 5–8%
+- Explicit explanation of TAM calculation logic
+- Clear formulas and assumptions
+- Conservative / Base / Optimistic scenarios
+
+Every number must include a source.
+
+---
+
+## 3) Currency and Macroeconomic Risks
+
+Include:
+- Currency volatility
+- Inflation
+- FX payment restrictions
+- Devaluation risk
+- Recommended RUB discount rate for CAPEX funded by a Russian company
+
+Each metric must have a source.
+If recommendation lacks evidence → “данные не нашли, в результате не уверен”.
+
+---
+
+## 4) Taxation and Regulation
+
+Include:
+- VAT and digital service taxation
+- Data localization requirements
+- Requirement for local legal entity
+- Corruption level
+- Regulatory stability
+
+Cite official or reputable sources.
+
+---
+
+## 5) Digital Infrastructure (Compared to Russia)
+
+For each indicator, compare “Target Country” vs “Russia”:
+
+- Internet penetration
+- Cloud infrastructure development
+- ERP/CRM penetration
+- Business process automation level
+- Digital literacy
+
+Every comparison must include sources.
+
+---
+
+## 6) B2B Negotiation Language and Localization Risk
+
+Analyze:
+- Main language of B2B negotiations
+- Is English sufficient?
+- Is local-language sales mandatory?
+- Are government tenders language-restricted?
+- Cultural barriers in enterprise sales
+
+Cite data or reputable business practice sources.
+
+---
+
+## 7) Competitive Landscape
+
+For each niche (6 niches total):
+- Identify competitors.
+- Provide at least 3 competitors per niche.
+- Total competitive coverage should be no less than 20 companies overall.
+
+For each competitor provide:
+
+1) Revenue
+2) Number of users
+3) Technological advantages and disadvantages vs Russian analogs:
+   - Detailed analysis
+   - JTBD differences
+   - Architectural/infrastructure differences
+4) Growth dynamics and drivers
+5) User acquisition channels
+6) Target client segment (SMB / mid-market / enterprise / government)
+7) Headcount
+8) Unfair competitive advantages
+
+All quantitative data must include sources.
+
+---
+
+# Deliverables
+
+1) Full structured research in Russian.
+2) Clean .doc file.
+3) Clean .pdf file.
+4) No prompt artifacts included.
+
+---
+
+# First Step (Mandatory)
+
+Ask:
+“For which country should the research be conducted?”
+
+Stop execution until the answer is received.
