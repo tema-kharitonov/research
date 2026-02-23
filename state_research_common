@@ -93,4 +93,176 @@ type: deep
 Пропускать пункты.
 Использовать местную валюту страны для расчётов
 
+type: deep
 
+# Language of the Prompt
+The prompt must be written in English.
+
+# Language of the Final Research
+The final research report must be written entirely in Russian.
+❌ It is forbidden to write the final research in English.
+
+# Critical Restrictions
+- ❌ Do NOT use CDATA.
+- ❌ Do NOT fabricate data in sections that do not explicitly begin with “Estimated!”.
+- ❌ Do NOT use the local currency of the country in any calculations or output.
+- ❌ Do NOT skip any sections.
+- ❌ Do NOT use tables with more than 3 columns.
+- ✅ All monetary figures must be shown in USD.
+- ✅ Every numerical figure must have a source link.
+- ✅ Data must be from 2023–2026 only.
+- ✅ If reliable data is unavailable, write: “данные не нашли, в результате не уверен”.
+
+# Execution Order
+
+1. First, ask the user:
+   “For which country should the research be conducted?”
+2. Do NOT start the research until the user answers.
+3. Execute each section strictly in order.
+4. After completing each section:
+   - Verify compliance with the rules in “How to Work with Data”.
+   - If violations exist, correct the text immediately.
+   - Do NOT write a separate correction block.
+5. Only after verification proceed to the next section.
+
+# How to Work with Data
+
+1. First, use the predefined list of sources (if provided in the appendix).
+2. If data is not available there, search reliable public sources.
+3. Under no circumstances use fabricated data in sections without “Estimated!”.
+4. You may use unverified estimates only if the section explicitly starts with “Estimated!”.
+5. Always attach the source link immediately after each numerical value.
+6. Use only 2023–2026 data.
+7. If reliable data cannot be found, write:
+   “данные не нашли, в результате не уверен”.
+
+# Research Structure
+
+## 1. Economic Scale and Structure
+
+Include:
+- Nominal GDP in USD
+- GDP per capita in USD
+- SME share of GDP
+- Sectoral structure (services, IT, industry, etc.)
+
+Do NOT calculate or display:
+- GDP (PPP)
+- GDP in local currency
+
+Every number must include a source.
+
+---
+
+## 2. Addressable Market Size
+
+### 2.1 Company Structure
+
+- Total number of companies in the country
+- Number of large and state-owned companies
+- Number of micro businesses
+- Number of digitized small and medium businesses
+
+Accuracy requirement: 5–8%.
+
+Every number must include a source.
+
+### 2.2 Market Size in Monetary Terms
+
+- From sources! Market size in USD (excluding micro-business segment).
+- Estimated! TAM-SAM-SOM:
+  - in USD
+  - in number of companies
+
+Do NOT calculate or display:
+- Data in local currency
+- Comparison with the Russian market
+
+Mandatory:
+- Explicit TAM-SAM-SOM calculation formulas.
+- Clear assumptions.
+- Mark clearly where “Estimated!” is used.
+
+---
+
+## 3. Currency and Macroeconomic Risks
+
+Include:
+- Currency volatility
+- Inflation
+- Restrictions on foreign currency payments
+- Devaluation risk
+- Estimated! Recommended discount rate in RUB if CAPEX is funded by a Russian company
+
+The discount rate must be calculated using standard financial methodology (e.g., country risk premium, inflation differential, cost of capital).
+
+Every number must include a source.
+
+---
+
+## 4. Taxation and Regulation
+
+Include:
+- VAT and digital service taxes
+- Data localization requirements
+- Requirement for a local legal entity
+- Corruption level
+- Regulatory stability
+
+Sources are mandatory.
+
+---
+
+## 5. Digital Infrastructure (Comparison with Russia)
+
+For each metric, compare the target country with Russia:
+
+- Internet penetration
+- Cloud infrastructure development
+- ERP/CRM adoption
+- Business automation level
+- Digital literacy
+- Estimated! Language used in B2B negotiations
+
+Every number must include a source.
+Comparison with Russia is mandatory.
+
+---
+
+## 6. Competition
+
+Target Niches:
+- EDI / HR EDI
+- E-reporting and tax services
+- KYC / compliance and counterpart verification
+- CLM / contract lifecycle management and archiving
+- AI functions (OCR, auto-fill, scoring)
+- Video conference solutions
+
+For each niche, identify competitors.
+
+For each competitor provide:
+
+1. Revenue (with source)
+2. Number of users (with source)
+3. Detailed technological advantages and disadvantages vs Russian analogues:
+   - Detailed explanation
+   - JTBD differences
+   - Architectural and infrastructure differences
+4. Growth dynamics and drivers
+5. Acquisition channels
+6. Target segment (SMB / mid-market / enterprise / government)
+7. Headcount (with source)
+8. Unfair competitive advantages
+
+Cover all 6 niches.
+Do NOT skip any required elements.
+
+---
+
+# Mandatory First Step
+
+Ask:
+“For which country should the research be conducted?”
+
+Stop execution until the user responds.
