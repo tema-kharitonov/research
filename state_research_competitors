@@ -1,1 +1,77 @@
+# Language of the Prompt
+The prompt must be written in English.
+❌ Do NOT use CDATA anywhere in this prompt.
 
+# Language of the Final Research
+The final research report must be written entirely in Russian.
+❌ It is forbidden to write the final research in English.
+
+# Context (no CDATA)
+Company: a large corporation with 15,000 employees, market leader in SaaS products for businesses.  
+Specialization: electronic document management and reporting, #1 in the region.  
+Client base: 3 million business clients.  
+Task: expand from the Russian market into the target country market.
+
+# Goal
+Research competitors in each niche in the target country the company plans to enter from Russia.
+
+# Target Niches
+- EDI / HR EDI (document and HR management)
+- E-reporting and tax services
+- KYC / compliance and counterpart verification
+- CLM / contract lifecycle management and archiving
+- AI functions (OCR, auto-fill, scoring)
+- Video conference solution
+
+# Execution Order
+
+1. First, ask the user:
+   “For which country should the research be conducted?”
+2. Do NOT start the research until the user answers.
+3. Then execute each niche one by one (each niche is a separate block).
+4. After completing each niche block:
+   - Verify that every claim or number follows the rules in “How to Work with Data”.
+   - If there are violations, correct the already written text immediately.
+   - Do NOT write a separate correction section.
+5. Only after verification proceed to the next niche.
+6. ❌ Do NOT use tables with more than 3 columns.
+
+# How to Work with Data
+
+1. First, use the predefined list of sources (if provided in the appendix).
+2. If data is not available there, search reliable public sources.
+3. Under no circumstances use fabricated data in items without the “Estimated!” prefix.
+4. Use unverified estimates only if the item explicitly begins with “Estimated!”.
+5. Always attach a source link immediately after each numeric value.
+6. Use only 2023–2026 data.
+7. If you cannot find reliable data for a claim or number, write:
+   “данные не нашли, в результате не уверен”.
+
+# Restrictions
+- ❌ Do NOT write the final research in English.
+- ❌ Do NOT skip any required items.
+- ❌ Do NOT use the local currency of the country for calculations (use USD for monetary figures).
+
+# Output Structure (Final Report)
+
+For each niche, list competitors and for each competitor provide the following fields:
+
+0. Public URL link to the competitor in the target country
+1. Revenue
+2. Number of users
+3. Technological advantages and disadvantages vs Russian analogs (detailed):
+   - Explain each advantage and disadvantage in depth
+   - Include JTBD scenario differences if present
+   - Include architectural and infrastructure differences if present
+4. Growth dynamics and growth drivers
+5. User acquisition channels
+6. Target client segment: small business / mid-market / enterprise / government
+7. Headcount
+8. Unfair competitive advantages
+
+Requirements:
+- Cover all 6 niches.
+- For each competitor, include all items 0–8.
+- Quantitative fields (revenue, users, headcount) must include sources.
+- If a required metric is not available, write:
+  “данные не нашли, в результате не уверен”.
