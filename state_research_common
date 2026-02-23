@@ -1,189 +1,96 @@
 type: deep
 
-# Language Requirement
-The prompt itself must be written in English.
-The final research report must be written entirely in Russian.
+Собери промпт по нашим правилам для исследования рынков разных стран, для выхода в них продуктов saas b2b из России.
 
-# Critical Rules
-- ❌ Do NOT use CDATA.
-- ❌ Do NOT invent data.
-- ✅ Every number must have a source link.
-- ✅ Data must be from 2023–2026 only.
-- ✅ If no reliable data is found, write: “данные не нашли, в результате не уверен”.
-- ✅ Final deliverable must be provided in .doc and .pdf formats.
-- ✅ The final report must be fully cleaned from prompt/system text and ready for external delivery.
+#структура исследования на выходе
+##Масштаб и структура экономики
+- Номинальный ВВП в usd
+- ВВП на душу населения в usd
+- Доля МСБ в ВВП
+- Отраслевая структура (доля услуг, IT, промышленности и т.д.)
+не надо считать и показывать
+- ВВП по ППС
+- ВВП в местной валюте страны
 
-# Execution Order
+##Размер адресуемого рынка
+1.
+- Сколько компаний в стране
+- Сколько кампаний крупных и государственных
+- Сколько компаний микро-бизнеса
+- Сколько цифровизованных компаний среднего и малого бизнеса.
+С точностью до 5..8%
+2.
+- из источников! Оценка размера рынка в деньгах. За исключением микро-бизнеса
+- оценочно! Размер рынка по TAM-SAM-SOM в usd и в количестве компаний.
+не надо считать и показывать
+- данные в местной валюте страны
+- сравнение с рынком РФ
 
-1) Ask the user:
-   “For which country should the research be conducted?”
-2) Do NOT proceed until the user answers.
-3) Execute each section strictly one by one.
-4) After completing each section:
-   - Verify that every numeric claim follows the rules in “How to Work with Data”.
-   - Fix violations before moving forward.
-5) ❌ Do NOT use tables with more than 3 columns.
+##Валютные и макроэкономические риски
+- Волатильность валюты
+- Инфляция
+- Ограничения на валютные платежи
+- Риск девальвации
+- оценочно! Рекомендованная ставка дисконтирования вложений в рублях, если capex будет оплачиваться российской компанией. Рассчитай по общепринятой методологии.
 
-# How to Work with Data
+##Налоговая нагрузка и регуляторика
+- НДС и другие налоги на цифровые услуги
+- Требования по локализации данных
+- Требование юрлица в стране
+- Уровень коррупции
+- Регуляторная стабильность
 
-1) First use the predefined list of sources (if provided).
-2) If missing, search publicly available reliable sources.
-3) Never fabricate data.
-4) Always attach the source immediately after each number.
-5) Only use 2023–2026 data.
-6) If unavailable → “данные не нашли, в результате не уверен”.
+##Развитость цифровой инфраструктуры
+- Интернет penetration
+- Облачная инфраструктура
+- Использование ERP/CRM
+- Уровень автоматизации бизнеса
+- Цифровая грамотность населения.
+- оценочно! на каком языке ведуться бизнес-переговоры в стране.
+В этом разделе каждый из пунктов по сравнению с Россией.
 
-# Research Objective
+##Конкуренция
+В каждой нише из раздела #Ниши для исследования приведи конкурентов.
+По каждому конкуренту:
+1. Объем выручки
+2. Кол-во пользователей
+3. Преимущества и недостатки технологического решения по сравнению с Российскими аналогами. Этот пункт развёрнуто, каждое преимущество и недостаток распиши подробно. Если там есть различия в jtbd-сценариях, распиши с ними. Если есть архитектурыне и инфраструктурные различия, опиши их подробно.
+4. Динамика и драйверы роста.
+5. Каналы привлечения пользователей.
+6. Каким компаниям продаётся решение: малому бизнесу, среднему, крупному или государственным.
+7. Штатную численность компании-конкурента.
+8. Нечестные конкурентные преимущества
+Т.е. ты дашь 6 ниш, в каждой нише конкурентов, по каждому конкуренту 8 пунктов описания.
 
-Conduct a structured country market analysis for launching Russian B2B SaaS products.
+#Ниши для исследования
+ - EDI / HR EDI (document and HR management)  
+  - E-reporting and tax services  
+  - KYC / compliance and counterpart verification  
+  - CLM / contract lifecycle management and archiving  
+  - AI functions (OCR, auto-fill, scoring)  
+  - video conference solution
 
-Focus areas:
-- Market potential
-- Risks
-- Regulatory environment
-- Digital infrastructure
-- Competitive landscape
-- Investment feasibility
 
-# Target Niches
+#порядок выполнения исследования
+· Сначала спроси, для какой страны выполняется исследование. Не выполняй промпт, пока не ответишь на этот вопрос.
+· Потом выполняй каждый блок по отдельности.
+· После выполнения каждого блока, проверь, что на каждое утверждение или цифру выполнены правила из раздела #Как работать с данными. Исправь, если это не так.
+· Не пиши результаты исправления в отдельный блок. Изменяй уже написанный текст.
+· Только после этого переходи к следующему разделу.
+· Не используй таблицы в оформлении, если в табилце больше 3х колонок. Это строго запрещено!
 
-- EDI / HR EDI (document and HR management)
-- E-reporting and tax services
-- KYC / compliance and counterpart verification
-- CLM / contract lifecycle management and archiving
-- AI functions (OCR, auto-fill, scoring)
-- Video conference solutions
+#Как работать с данными
+· В первую очередь обратить к списку источников, который указан в приложении и возьми данные из источников
+· Если не смог найти данные в источнике, а они тебе нужны, ищи в интернете.
+· Ни при каких обстоятельствах не используй придуманные данные в пунктах, где нет в начале фразы «оценочно!».
+· Тогда и только тогда используй данные, которые не можешь подтвердить, если в начале фразы есть «оценочно!».
+· Всегда указывай ссылку на данные, как только пишешь любую цифру.
+· Данные должны быть 2023-2026 года, не старше.
+· Если тебе всё же необходимо указать какой-то тезис или цифру, но ты не можешь найти под него достоверные данные, напиши “данные не нашли, в результате не уверен”.
 
----
+#запрещено
+Писать по английски.
+Пропускать пункты.
+Использовать местную валюту страны для расчётов
 
-# Final Research Structure
 
-## 1) Economic Scale and Structure
-
-Include:
-- Nominal GDP
-- GDP (PPP)
-- GDP per capita
-- SME share of GDP
-- Sectoral structure (services, IT, industry, etc.)
-
-Each number must have a source.
-
----
-
-## 2) Addressable Market Size (TAM / SAM)
-
-Market size must be calculated:
-- In monetary terms
-- In number of companies/users
-
-Required:
-- Total number of companies
-- Number of large and state-owned enterprises
-- Number of micro businesses
-- Number of digitized SMB companies
-
-Accuracy requirement:
-- Estimation precision within 5–8%
-- Explicit explanation of TAM calculation logic
-- Clear formulas and assumptions
-- Conservative / Base / Optimistic scenarios
-
-Every number must include a source.
-
----
-
-## 3) Currency and Macroeconomic Risks
-
-Include:
-- Currency volatility
-- Inflation
-- FX payment restrictions
-- Devaluation risk
-- Recommended RUB discount rate for CAPEX funded by a Russian company
-
-Each metric must have a source.
-If recommendation lacks evidence → “данные не нашли, в результате не уверен”.
-
----
-
-## 4) Taxation and Regulation
-
-Include:
-- VAT and digital service taxation
-- Data localization requirements
-- Requirement for local legal entity
-- Corruption level
-- Regulatory stability
-
-Cite official or reputable sources.
-
----
-
-## 5) Digital Infrastructure (Compared to Russia)
-
-For each indicator, compare “Target Country” vs “Russia”:
-
-- Internet penetration
-- Cloud infrastructure development
-- ERP/CRM penetration
-- Business process automation level
-- Digital literacy
-
-Every comparison must include sources.
-
----
-
-## 6) B2B Negotiation Language and Localization Risk
-
-Analyze:
-- Main language of B2B negotiations
-- Is English sufficient?
-- Is local-language sales mandatory?
-- Are government tenders language-restricted?
-- Cultural barriers in enterprise sales
-
-Cite data or reputable business practice sources.
-
----
-
-## 7) Competitive Landscape
-
-For each niche (6 niches total):
-- Identify competitors.
-- Provide at least 3 competitors per niche.
-- Total competitive coverage should be no less than 20 companies overall.
-
-For each competitor provide:
-
-1) Revenue
-2) Number of users
-3) Technological advantages and disadvantages vs Russian analogs:
-   - Detailed analysis
-   - JTBD differences
-   - Architectural/infrastructure differences
-4) Growth dynamics and drivers
-5) User acquisition channels
-6) Target client segment (SMB / mid-market / enterprise / government)
-7) Headcount
-8) Unfair competitive advantages
-
-All quantitative data must include sources.
-
----
-
-# Deliverables
-
-1) Full structured research in Russian.
-2) Clean .doc file.
-3) Clean .pdf file.
-4) No prompt artifacts included.
-
----
-
-# First Step (Mandatory)
-
-Ask:
-“For which country should the research be conducted?”
-
-Stop execution until the answer is received.
