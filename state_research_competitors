@@ -1,18 +1,17 @@
-# Language of the Prompt
-The prompt must be written in English.
-❌ Do NOT use CDATA anywhere in this prompt.
-
 # Language of the Final Research
 The final research report must be written entirely in Russian.
 ❌ It is forbidden to write the final research in English.
 
-# Context (no CDATA)
+# Goal
+Research international markets for expansion of Russian B2B SaaS products.
+
+# Context
 Company: a large corporation with 15,000 employees, market leader in SaaS products for businesses.  
 Specialization: electronic document management and reporting, #1 in the region.  
 Client base: 3 million business clients.  
-Task: expand from the Russian market into the target country market.
+Task: to expand from the Russian market into other international markets.
 
-# Goal
+# Research Objective
 Research competitors in each niche in the target country the company plans to enter from Russia.
 
 # Target Niches
