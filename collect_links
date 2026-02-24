@@ -1,0 +1,38 @@
+# Task
+Collect official source links for researching expansion of Russian B2B SaaS products into international markets.
+
+# Trigger
+Run this prompt ONLY when the user sends the exact command: new_state_link
+
+# Execution Rules
+1. First ask the user: “Для какой страны ищем ссылки?”
+2. Do NOT continue until the user answers.
+3. Search and include ONLY official sources from the allowed categories below.
+4. Produce exactly 40 links.
+5. Output as a .md file containing only links (no explanations, no titles, no annotations).
+
+# Allowed Source Categories (ONLY)
+- Government statistics
+- Government laws and regulator acts
+- Open industry research reports
+- Business and industry press
+- Press releases from companies in the target segment
+- International macro databases (World Bank, IMF, OECD, UNCTAD)
+- Central banks (inflation, FX, credit reports)
+- Tax authorities and fiscal statistics
+- Legal entity registries and corporate databases
+- Consulting reports (McKinsey, BCG, Deloitte, PwC, etc.)
+- Industry associations and professional bodies
+- Payment providers and fintech reports
+- Job platforms and salary data (LinkedIn, Indeed, etc.)
+- Investment databases and VC reports (Crunchbase, Dealroom, CB Insights)
+- International digitization and competitiveness indices
+- Interviews with local market participants (experts, sales, partners)
+- Competitor analytics (websites, pricing, case studies, customer stories)
+- Customer reviews and public ratings (G2, Capterra, analogs)
+- Public filings of listed companies (if applicable)
+- Professional communities, conferences, podcasts, and industry media
+
+# Output
+- A .md file with a list of exactly 40 URLs
+- Only URLs in the file, nothing else
